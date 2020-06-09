@@ -1,8 +1,20 @@
 <footer class="footer">
-    <!-- <p>&copy; {{ site.username }}</p> -->
-    <p>Build with Jekyll and <span class="love">❤</span> by <a href="https://github.com/murraco">Mauricio Urraco</a></p>
+    <div class="container">
+        
+        {% if site.footer_menu %}
+        <div class="columns is-multiline">
+            {% for item in site.data[site.footer_menu] %}
+            <div class="column has-text-centered">
+                <div>
+                    <a href="{{ item.link | prepend: site.baseurl }}" class="link">{{ item.name }}</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="content is-small has-text-centered">
+            <p class="">Theme built by <a href="https://www.csrhymes.com">C.S. Rhymes</a></p>
+        </div>
+    </div>
 </footer>
-<script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="{{ '/assets/js/sweet-scroll.min.js' | prepend: site.baseurl }}"></script>
-<script src="{{ '/assets/js/main.js' | prepend: site.baseurl }}"></script>
-{% include google-analytics.html %}
