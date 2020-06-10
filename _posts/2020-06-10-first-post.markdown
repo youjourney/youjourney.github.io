@@ -11,8 +11,11 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
 0123456789
 
-{{ page.title }}
-{{ page.last_modified_at }}
+```kotlin
+fun main() {
+    println("Hello World!")
+}
+```
 
 [jekyll]:      http://jekyllrb.com
 [jekyll-gh]:   https://github.com/jekyll/jekyll

@@ -4,4 +4,11 @@ title: About
 permalink: /about/
 ---
 
-Welcome to this website!
+```kotlin
+// written in Kotlin
+fun main() {
+    println("""Hello World!
+            |This is Youjourney's Blog
+    """.trimMargin())
+}
+```
