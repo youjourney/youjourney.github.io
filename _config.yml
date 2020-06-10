@@ -1,78 +1,59 @@
-# Site Settings
-title: Bulma Clean Theme
-tagline: Bulma Clean Theme
-email: your-email@domain.com
-description: >
-  The demo site for Bulma Clean Theme, made for Jekyll and GitHub pages websites
-baseurl: ""
-url: "https://youjourney.gitHub.com"
-permalink: pretty
-#favicon: /path/to/favicon.png
-gh_sponsor: chrisrhymes
-#hide_share_buttons: true
+# Site settings
+title: Youjourney Blog
+url: "http://laobubu.github.io"    # the protocol and hostname of your site, eg. `http://laobubu.github.io`
+baseurl: "" # the prefix of your site uri, eg. `"/jekyll-theme-EasyBook"` or empty string `""`
+#timezone: Asia/Chongqing
+description: Developer blog
 
-paginate: 5
-paginate_path: "/blog/page:num"
+# Your information
+email: you.journey.91@gmail.com
+author: Youjourney
+avatar: "//www.gravatar.com/avatar/your_email_md5?d=mm&s=135"
+profile: "Let's do CODE.
+Java, Kotlin dev"
+#twitter_username: twitter_username
+#github_username:  github_username
+profile_links:
+  Email: "mailto:you.journey.91@gmail.com"
+  GitHub: "https://github.com/laobubu/jekyll-theme-EasyBook"
+  # You can add more profile links above, or edit _includes/sidebar.html
 
-# Disqus Comments
-disqus:
-  # Leave shortname blank to disable comments site-wide.
-  # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
-  # shortname: my_disqus_shortname
-  shortname: csrhymes
+# Comment Service (Disqus or 多说)
+#  choose one and un-comment the line to active it
+#disqus_shortname: xxx   # get one: https://disqus.com/admin/signup/
+#duoshuo_shortname: xxx  # get one: http://duoshuo.com/create-site/
 
+excerpt_separator: <!--more-->
 
+header:
+  links:             # Links on the header. Link to in-site page with a slash as prefix
+    About: /about/
+    Category: /category/
+    Donate: https://laobubu.net/donate.html
+
+permalink: /archivers/:title
 plugins:
-  - jekyll-sitemap
-  - jekyll-paginate
-  - jekyll-feed
-  - jekyll-seo-tag
-  - kramdown
-  - rouge
+ - jekyll-paginate
+ - jekyll-gist
+ - jemoji
 
-exclude:
-  - Gemfile
-  - clean-theme.gemspec
-  - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+# Build settings
+paginate: 5
+paginate_path: "page:num"
 
-livereload: true
+highlighter: rouge
+markdown: kramdown
 
-sass:
-  style: compressed
-  source_dir: _sass
-
-#google_analytics: UA-code-here
-
+# https://jekyllrb.com/docs/configuration/#precedence
 defaults:
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      show_sidebar: true
   -
     scope:
       path: ""
       type: "posts"
     values:
-      author: "C.S. Rhymes"
-      layout: post
-      image: https://via.placeholder.com/1200x800
-      show_sidebar: true
+      layout: "post"
 
-markdown: kramdown
-highlighter: rouge
-
-footer_menu: example_footer_menu
-
-collections:
-  products:
-    output: true
-    layout: product
-    image: https://via.placeholder.com/800x600
-    show_sidebar: false
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  math_engine: mathjax
