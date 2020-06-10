@@ -2,7 +2,7 @@
 layout: post
 title:  "My first posting"
 date:   2020-06-10 12:00:00
-categories: blog post
+categories: blog
 permalink: /archivers/hello
 ---
 
