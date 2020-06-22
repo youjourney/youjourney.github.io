@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://youjourney.github.io/sitemap.xml
