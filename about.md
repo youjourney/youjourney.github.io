@@ -9,6 +9,8 @@ permalink: /about/
 fun main() {
     println("""Hello World!
             |This is Youjourney's Blog
+            |I moved here from youjourney.tistory.com
+
     """.trimMargin())
 }
 ```
