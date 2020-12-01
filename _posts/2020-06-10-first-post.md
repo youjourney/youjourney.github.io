@@ -1,9 +1,10 @@
 ---
-layout: post
-title:  "My first posting"
-date:   2020-06-10 12:00:00
-categories: blog
-permalink: /archivers/hello
+title: "My first posting"
+excerpt: ABCDEFGHIJKLMNOPQRSTUVWXYZ
+categories:
+- blog
+tags:
+last_modified_at: 2020-06-10T12:00:00+09:00
 ---
 
 ## 첫 포스트 ##

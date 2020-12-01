@@ -1,130 +1,604 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
   <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
 
-  <title>Youjourney Blog</title>
-  <meta name="description" content="Developer blog">
-
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/">
-  <link rel="alternate" type="application/rss+xml" title="Youjourney Blog" href="http://localhost:4000/feed.xml" />
-</head>
+<!-- begin _includes/seo.html --><title>Youjourney Blog</title>
+<meta name="description" content="Developer blog">
 
 
-  <body>
-
-    <div class="header-placeholder"></div>
-<header class="header">
-  <div class="wrapper">
-    <div id="sidebar-toggle">TOC</div>
-    <a class="site-title" href="/">Youjourney Blog</a>
-    <nav class="site-nav">
-      
-        
-        <a class="page-link" href="/about/">About</a>
-      
-        
-        <a class="page-link" href="/category/">Category</a>
-      
-    </nav>
-  </div>
-</header>
+  <meta name="author" content="Youjourney">
+  
 
 
-    <div class="page-content">
-      <div class="wrapper">
-        <div class="col-main">
-          <div class="home">
-  <a class="rss-link" href="/feed.xml">RSS Feed</a>
-  <h1 class="page-heading">Articles</h1>
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Youjourney Blog">
+<meta property="og:title" content="Youjourney Blog">
+<meta property="og:url" content="http://localhost:4000/">
 
-  <ul class="post-list">
+
+  <meta property="og:description" content="Developer blog">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/">
+
+
+
+  <link rel="next" href="http://localhost:4000/page2/">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
     
-      <li>
-        <h2>
-          <a class="post-link" href="/archivers/first_post">Welcome to Jekyll and EasyBook</a>
-        </h2>
-        
-        <div class="post-meta">Dec 30, 2014</div>
-
-        <div class="post-excerpt">
-          <p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
-
-<p>To add new posts, simply add a file in the <code class="language-plaintext highlighter-rouge">_posts</code> directory that follows the convention <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
-
-
-          
-          <p>
-            <a class="post-link" href="/archivers/first_post">Read More &raquo;</a>
-          </p>
-        </div>
-      </li>
+      "@type": "Person",
+      "name": "Youjourney",
+      "url": "http://localhost:4000/"
     
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Youjourney Blog Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--home">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
   </ul>
-  
-  <!-- Pagination links -->
-<div class="pagination">
-  
-    <span class="previous">PREV</span>
-  
-  <span class="page_number ">1 of 1</span>
-  
-    <span class="next ">NEXT</span>
-  
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Youjourney Blog
+          <span class="site-subtitle">Let's do CODE</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories-archive/">Categories</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
 </div>
 
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="https://avatars2.githubusercontent.com/u/31856845?s=400&u=4ce4f05bc60d9fee71a3de544a846667c412e1db&v=4" alt="Youjourney" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Youjourney</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Interested in Kotlin, Swift, Java.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Seoul, South Korea</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:you.journey.91@gmail.com">
+            <meta itemprop="email" content="you.journey.91@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">이메일</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
 </div>
 
-        </div>
-        <div class="col-second">
-          <div class="col-box col-box-author">
-  <img class="avatar" src="https://avatars2.githubusercontent.com/u/31856845?s=400&u=4ce4f05bc60d9fee71a3de544a846667c412e1db&v=4" alt="Youjourney">
-  <div class="col-box-title name">Youjourney</div>
-  <p>Let's do CODE. Java, Kotlin dev</p>
-  <p class="contact">
+  
+  </div>
+
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title"></h1>
     
     
+
+<h3 class="archive__subtitle">최근 포스트</h3>
+
+
+
+
+<div class="entries-list">
+  
     
-    <a href="mailto:you.journey.91@gmail.com">Email</a>
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <a href="#">GitHub</a>
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/archivers/BOJ1082" rel="permalink">[백준] 방 번호 (1082)(Kotlin)
+</a>
+      
+    </h2>
     
-    <a href="#">LinkedIn</a>
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 분 소요
+        
+      </span>
     
   </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">이번에 VIP 회장으로 새로 부임한 백은진은 빅뱅의 위대함을 세계에 널리 알리기 위해서 사무실을 하나 임대했다.
+</p>
+  </article>
 </div>
 
-<div class="col-box">
-  <div class="col-box-title">Newest Posts</div>
-  <ul class="post-list">
+  
     
-      <li><a class="post-link" href="/archivers/first_post">Welcome to Jekyll and EasyBook</a></li>
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/archivers/BOJ1043" rel="permalink">[백준] 거짓말 (1043)(Kotlin)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">지민이는 파티에 가서 이야기 하는 것을 좋아한다. 파티에 갈 때마다, 지민이는 지민이가 가장 좋아하는 이야기를 한다. 지민이는 그 이야기를 말할 때, 있는 그대로 진실로 말하거나 엄청나게 과장해서 말한다. 당연히 과장해서 이야기하는 것이 훨씬 더 재미있기 때문에, 되도록이면 과장해...</p>
+  </article>
+</div>
+
+  
+    
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/archivers/BOJ1038" rel="permalink">[백준] 감소하는 수 (1038)(Kotlin)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">음이 아닌 정수 X의 자릿수가 가장 큰 자릿수부터 작은 자릿수까지 감소한다면, 그 수를 감소하는 수라고 한다. 예를 들어, 321과 950은 감소하는 수지만, 322와 958은 아니다. N번째 감소하는 수를 출력하는 프로그램을 작성하시오. 0은 0번째 감소하는 수이고, 1은 1번째...</p>
+  </article>
+</div>
+
+  
+    
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/archivers/LinkedList" rel="permalink">[자료구조] LinkedList 구현하기 (Kotlin)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">링크드 리스트(Linked List)
+
+</p>
+  </article>
+</div>
+
+  
+    
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/archivers/BOJ2042" rel="permalink">[백준] 구간 합 구하기 (2042)(Kotlin)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">어떤 N개의 수가 주어져 있다. 그런데 중간에 수의 변경이 빈번히 일어나고 그 중간에 어떤 부분의 합을 구하려 한다. 만약에 1,2,3,4,5 라는 수가 있고, 3번째 수를 6으로 바꾸고 2번째부터 5번째까지 합을 구하라고 한다면 17을 출력하면 되는 것이다. 그리고 그 상태에서 ...</p>
+  </article>
+</div>
+
+  
+</div>
+
+
+<nav class="pagination">
+  
+  <ul>
+    
+    
+    <li><a href="#" class="disabled"><span aria-hidden="true">이전</span></a></li>
+    
+
+    
+    
+      <li><a href="#" class="disabled current">1</a></li>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+        
+        
+        
+        <li><a href="/page2/">2</a></li>
+      
+    
+      
+        
+        
+        
+        <li><a href="/page3/">3</a></li>
+      
+    
+
+    
+    
+      <li><a href="#" class="disabled">&hellip;</a></li>
+    
+
+    
+      <li><a href="/page25/">25</a></li>
+    
+
+    
+    
+      <li><a href="/page2/">다음</a></li>
+    
+  </ul>
+</nav>
+
+
+
+  </div>
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
   </ul>
 </div>
 
-<div class="col-box post-toc hide">
-  <div class="col-box-title">TOC</div>
-</div>
+<div class="page__footer-copyright">&copy; 2020 Youjourney. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
-        </div>
-      </div>
+      </footer>
     </div>
 
-    <footer class="footer">
-<div class="wrapper">
-&copy; 2020 Youjourney
-</div>
-</footer>
+    
+  <script src="/assets/js/main.min.js"></script>
 
-<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});</script>
-<script src="/js/easybook.js"></script>
+
+
+
+
+
+
+
 
 
   </body>
-
 </html>

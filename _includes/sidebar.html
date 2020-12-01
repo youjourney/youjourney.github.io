@@ -1,29 +1,19 @@
-<div class="col-box col-box-author">
-  <img class="avatar" src="{{ site.avatar }}" alt="{{ site.author }}">
-  <div class="col-box-title name">{{ site.author }}</div>
-  <p>{{ site.profile }}</p>
-  <p class="contact">
-    {% if site.github_username %}
-    <a href="https://github.com/{{ site.github_username }}">GitHub</a>
-    {% endif %}
-    {% if site.twitter_username %}
-    <a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a>
-    {% endif %}
-    {% for link in site.profile_links %}
-    <a href="{{ link | last }}">{{ link | first }}</a>
+{% if page.author_profile or layout.author_profile or page.sidebar %}
+  <div class="sidebar sticky">
+  {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
+  {% if page.sidebar %}
+    {% for s in page.sidebar %}
+      {% if s.image %}
+        <img src="{{ s.image | relative_url }}"
+             alt="{% if s.image_alt %}{{ s.image_alt }}{% endif %}">
+      {% endif %}
+      {% if s.title %}<h3>{{ s.title }}</h3>{% endif %}
+      {% if s.text %}{{ s.text | markdownify }}{% endif %}
+      {% if s.nav %}{% include nav_list nav=s.nav %}{% endif %}
     {% endfor %}
-  </p>
-</div>
-
-<div class="col-box post-toc hide">
-  <div class="col-box-title">TOC</div>
-</div>
-
-<div class="col-box">
-  <div class="col-box-title">Newest Posts</div>
-  <ul class="post-list">
-    {% for post in site.posts limit:20 %}
-      <li><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
+    {% if page.sidebar.nav %}
+      {% include nav_list nav=page.sidebar.nav %}
+    {% endif %}
+  {% endif %}
+  </div>
+{% endif %}

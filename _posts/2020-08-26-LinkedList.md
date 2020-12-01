@@ -1,9 +1,10 @@
 ---
-layout: blog
-title:  "[자료구조] LinkedList 구현하기 (Kotlin)"
-date:   2020-08-26 16:00:00+0900
-categories: studies
-permalink: /archivers/DS_LinkedList_200826
+title: "[자료구조] LinkedList 구현하기 (Kotlin)"
+excerpt: 
+categories:
+- studies
+tags:
+last_modified_at: 2020-08-26T16:00:00+0900
 ---
 
 ### 링크드 리스트(Linked List)
