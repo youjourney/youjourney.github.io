@@ -5,13 +5,96 @@
     <description>Developer blog</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 04 Dec 2020 12:04:07 +0900</pubDate>
-    <lastBuildDate>Fri, 04 Dec 2020 12:04:07 +0900</lastBuildDate>
+    <pubDate>Fri, 04 Dec 2020 12:13:08 +0900</pubDate>
+    <lastBuildDate>Fri, 04 Dec 2020 12:13:08 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
-        <title>[백준] Vera and Outfits (15439)(kotlin)</title>
-        <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/15439&quot;&gt;원본 문제&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+        <title>Boj15727</title>
+        <description>&lt;p&gt;b—
+title: “[백준] 조별과제를 하려는데 조장이 사라졌다  (15727)(kotlin)”
+excerpt: “3학년 1학기를 재학 중인 성우는 ‘빨간눈 초파리의 뒷다리 털의 개수와 파인애플 껍질의 이해’라는 과목을 수강 중이다. 기말고사를 맞이하여 교수님은 수강생들에게 조별과제를 내주었고, 그 내용은 다음과 같다.”
+categories:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;boj
+tags:&lt;/li&gt;
+  &lt;li&gt;algorithm&lt;/li&gt;
+  &lt;li&gt;kotlin
+last_modified_at: 2020-12-04T12:00:00+0900
+—&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/15727&quot;&gt;원본 문제&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;문제-설명&quot;&gt;문제 설명&lt;/h3&gt;
+
+&lt;p&gt;3학년 1학기를 재학 중인 성우는 ‘빨간눈 초파리의 뒷다리 털의 개수와 파인애플 껍질의 이해’라는 과목을 수강 중이다. 기말고사를 맞이하여 교수님은 수강생들에게 조별과제를 내주었고, 그 내용은 다음과 같다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;중간고사 이전에 배운 빨간눈 초파리의 뒷다리 털의 개수를 구하는 방법을 이용하여, 파인애플 껍질의 두께를 구하는 공식을 과학적인 근거와 함께 A4용지 10장 이상으로 제출하시오. [30%]&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;하지만 성우의 조 조장인 민건은 과제 내용을 듣자마자 집으로 도망쳐 버렸고, 성우는 민건이를 찾기 위해 떠난다. 성우는 1분에 1에서 5까지의 거리를 이동할 수 있다. 성우가 있는 곳으로부터 민건이의 집까지 거리가 주어졌을 때, 최대한 빨리 찾을 경우, 정확히 몇 분만에 민건이를 찾을 수 있는지 출력하는 프로그램을 작성하시오.&lt;/p&gt;
+
+&lt;h3 id=&quot;입력&quot;&gt;입력&lt;/h3&gt;
+
+&lt;p&gt;첫째 줄에 성우의 현재 위치와 민건이의 집까지의 거리 L(1 ≤ L ≤ 1,000,000)가 주어진다.&lt;/p&gt;
+
+&lt;h3 id=&quot;출력&quot;&gt;출력&lt;/h3&gt;
+
+&lt;p&gt;성우가 최소 t분만에 민건이를 찾을 수 있을 때, t 이상의 가장 작은 정수를 출력한다.&lt;/p&gt;
+
+&lt;h3 id=&quot;테스트-케이스&quot;&gt;테스트 케이스&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;입력&lt;/th&gt;
+      &lt;th&gt;출력&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;12&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;문제-풀이1&quot;&gt;문제 풀이1&lt;/h3&gt;
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;readLine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!!&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;toInt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;${(it / 5) + 1}&quot;&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;${it / 5}&quot;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Fri, 04 Dec 2020 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/archivers/BOJ15727</link>
+        <guid isPermaLink="true">http://localhost:4000/archivers/BOJ15727</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Boj15439</title>
+        <description>&lt;p&gt;b—
+title: “[백준] Vera and Outfits (15439)(kotlin)”
+excerpt: “Vera owns N tops and N pants. The i-th top and i-th pants have colour i, for 1 ≤ i ≤ N, where all N colours are different from each other.”
+categories:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;boj
+tags:&lt;/li&gt;
+  &lt;li&gt;algorithm&lt;/li&gt;
+  &lt;li&gt;kotlin
+last_modified_at: 2020-12-04T12:00:00+0900
+—&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/15439&quot;&gt;원본 문제&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;문제-설명&quot;&gt;문제 설명&lt;/h3&gt;
 
@@ -77,12 +160,6 @@
         <link>http://localhost:4000/archivers/BOJ15439</link>
         <guid isPermaLink="true">http://localhost:4000/archivers/BOJ15439</guid>
         
-        <category>algorithm</category>
-        
-        <category>kotlin</category>
-        
-        
-        <category>boj</category>
         
       </item>
     
@@ -568,79 +645,6 @@ System.out.println((a+b));
         <pubDate>Thu, 03 Dec 2020 00:00:00 +0900</pubDate>
         <link>http://localhost:4000/archivers/BOJ6749</link>
         <guid isPermaLink="true">http://localhost:4000/archivers/BOJ6749</guid>
-        
-        <category>algorithm</category>
-        
-        <category>kotlin</category>
-        
-        
-        <category>boj</category>
-        
-      </item>
-    
-      <item>
-        <title>[백준] 심부름 가는 길 (5554)(kotlin)</title>
-        <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/5554&quot;&gt;원본 문제&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;문제-설명&quot;&gt;문제 설명&lt;/h3&gt;
-
-&lt;p&gt;승균이는 매일 학교, PC방, 학원에 다닌다. 반복되는 일상에 익숙해진 승균이는 이동시간을 단축해서 PC방에 더 오래 머물고 싶었다. 그래서 스톱워치를 들고 이동할 때마다 기록을 잰 후 집에 가서 분석해보기로 했다.&lt;/p&gt;
-
-&lt;p&gt;집에 도착한 승균이는 측정한 결과를 보는 데, 전부 초 단위로 기록되어있다! 맨날 놀기만 해서 총 이동 시간이 몇 분 몇 초인지 계산을 못 하는 승균이를 도와주자.&lt;/p&gt;
-
-&lt;p&gt;하루 동안 측정한 결과가 주어지면, 이날의 총 이동 시간이 몇 분 몇 초인지 출력하는 프로그램을 작성하시오.&lt;/p&gt;
-
-&lt;h3 id=&quot;입력&quot;&gt;입력&lt;/h3&gt;
-
-&lt;p&gt;입력은 총 4줄이며, 한 줄에 하나씩 양의 정수가 적혀있다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;첫 번째 줄에 집에서 학교까지의 이동 시간을 나타내는 초가 주어진다.&lt;/li&gt;
-  &lt;li&gt;두 번째 줄에 학교에서 PC방까지의 이동 시간을 나타내는 초가 주어진다.&lt;/li&gt;
-  &lt;li&gt;세 번째 줄에 PC방에서 학원까지의 이동 시간을 나타내는 초가 주어진다.&lt;/li&gt;
-  &lt;li&gt;마지막 줄에 학원에서 집까지의 이동 시간을 나타내는 초가 주어진다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;집에 늦게 가면 혼나기 때문에, 총 이동시간은 항상 1 분 0 초 이상 59 분 59 초 이하이다.&lt;/p&gt;
-
-&lt;h3 id=&quot;출력&quot;&gt;출력&lt;/h3&gt;
-
-&lt;p&gt;총 이동시간 x 분 y 초를 출력한다. 첫 번째 줄에 x를, 두 번째 줄에 y를 출력한다.&lt;/p&gt;
-
-&lt;h3 id=&quot;테스트-케이스&quot;&gt;테스트 케이스&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;입력&lt;/th&gt;
-      &lt;th&gt;출력&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;31&lt;br /&gt;34&lt;br /&gt;7&lt;br /&gt;151&lt;/td&gt;
-      &lt;td&gt;3&lt;br /&gt;43&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;문제-풀이1&quot;&gt;문제 풀이1&lt;/h3&gt;
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.Scanner&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Scanner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;`in`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;nc&quot;&gt;IntArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;nextInt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;s&quot;&gt;&quot;${it / 60}\n&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;${it % 60}&quot;&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-        <pubDate>Thu, 03 Dec 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/archivers/BOJ5554</link>
-        <guid isPermaLink="true">http://localhost:4000/archivers/BOJ5554</guid>
         
         <category>algorithm</category>
         
