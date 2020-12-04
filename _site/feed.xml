@@ -5,18 +5,74 @@
     <description>Developer blog</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 04 Dec 2020 14:10:09 +0900</pubDate>
-    <lastBuildDate>Fri, 04 Dec 2020 14:10:09 +0900</lastBuildDate>
+    <pubDate>Fri, 04 Dec 2020 14:15:54 +0900</pubDate>
+    <lastBuildDate>Fri, 04 Dec 2020 14:15:54 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
-        <title>Boj18108</title>
+        <title>Boj18301</title>
         <description>
+</description>
+        <pubDate>Fri, 04 Dec 2020 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/archivers/BOJ18301</link>
+        <guid isPermaLink="true">http://localhost:4000/archivers/BOJ18301</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>[백준] 1998년생인 내가 태국에서는 2541년생?!  (18108)(kotlin)</title>
+        <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/18108&quot;&gt;원본 문제&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;문제-설명&quot;&gt;문제 설명&lt;/h3&gt;
+
+&lt;p&gt;ICPC Bangkok Regional에 참가하기 위해 수완나품 국제공항에 막 도착한 팀 레드시프트 일행은 눈을 믿을 수 없었다. 공항의 대형 스크린에 올해가 2562년이라고 적혀 있던 것이었다.&lt;/p&gt;
+
+&lt;p&gt;불교 국가인 태국은 불멸기원(佛滅紀元), 즉 석가모니가 열반한 해를 기준으로 연도를 세는 불기를 사용한다. 반면, 우리나라는 서기 연도를 사용하고 있다. 불기 연도가 주어질 때 이를 서기 연도로 바꿔 주는 프로그램을 작성하시오.&lt;/p&gt;
+
+&lt;h3 id=&quot;입력&quot;&gt;입력&lt;/h3&gt;
+
+&lt;p&gt;서기 연도를 알아보고 싶은 불기 연도 y가 주어진다. (1000 ≤ y ≤ 3000)&lt;/p&gt;
+
+&lt;h3 id=&quot;출력&quot;&gt;출력&lt;/h3&gt;
+
+&lt;p&gt;불기 연도를 서기 연도로 변환한 결과를 출력한다.&lt;/p&gt;
+
+&lt;h3 id=&quot;테스트-케이스&quot;&gt;테스트 케이스&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;입력&lt;/th&gt;
+      &lt;th&gt;출력&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2541&lt;/td&gt;
+      &lt;td&gt;1998&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;문제-풀이1&quot;&gt;문제 풀이1&lt;/h3&gt;
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;readLine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!!&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;toInt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;543&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Fri, 04 Dec 2020 00:00:00 +0900</pubDate>
         <link>http://localhost:4000/archivers/BOJ18108</link>
         <guid isPermaLink="true">http://localhost:4000/archivers/BOJ18108</guid>
         
+        <category>algorithm</category>
+        
+        <category>kotlin</category>
+        
+        
+        <category>boj</category>
         
       </item>
     
@@ -563,71 +619,6 @@
         <pubDate>Fri, 04 Dec 2020 00:00:00 +0900</pubDate>
         <link>http://localhost:4000/archivers/BOJ15894</link>
         <guid isPermaLink="true">http://localhost:4000/archivers/BOJ15894</guid>
-        
-        <category>algorithm</category>
-        
-        <category>kotlin</category>
-        
-        
-        <category>boj</category>
-        
-      </item>
-    
-      <item>
-        <title>[백준] 타노스 (15802)(kotlin)</title>
-        <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/15802&quot;&gt;원본 문제&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;문제-설명&quot;&gt;문제 설명&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;이 일이 끝나면 인류의 절반은 살아남을 것이다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;타노스가 당신 앞에 나타났다.&lt;/p&gt;
-
-&lt;p&gt;당신은 살아남을 수 있을까?&lt;/p&gt;
-
-&lt;h3 id=&quot;입력&quot;&gt;입력&lt;/h3&gt;
-
-&lt;p&gt;이 문제는 입력이 주어지지 않는다.&lt;/p&gt;
-
-&lt;h3 id=&quot;출력&quot;&gt;출력&lt;/h3&gt;
-
-&lt;p&gt;당신이 살아남는다면 1을, 살아남지 못한다면 0을 출력한다.&lt;/p&gt;
-
-&lt;h3 id=&quot;테스트-케이스&quot;&gt;테스트 케이스&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;입력&lt;/th&gt;
-      &lt;th&gt;출력&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;baekjoon&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;lll4592&lt;/td&gt;
-      &lt;td&gt;1&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;문제-풀이1&quot;&gt;문제 풀이1&lt;/h3&gt;
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;nf&quot;&gt;readLine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;your acmipcp id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-        <pubDate>Fri, 04 Dec 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/archivers/BOJ15802</link>
-        <guid isPermaLink="true">http://localhost:4000/archivers/BOJ15802</guid>
         
         <category>algorithm</category>
         
