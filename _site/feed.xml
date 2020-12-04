@@ -5,9 +5,20 @@
     <description>Developer blog</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 04 Dec 2020 11:49:11 +0900</pubDate>
-    <lastBuildDate>Fri, 04 Dec 2020 11:49:11 +0900</lastBuildDate>
+    <pubDate>Fri, 04 Dec 2020 11:51:53 +0900</pubDate>
+    <lastBuildDate>Fri, 04 Dec 2020 11:51:53 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
+    
+      <item>
+        <title>Boj14918</title>
+        <description>
+</description>
+        <pubDate>Fri, 04 Dec 2020 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/archivers/BOJ14918</link>
+        <guid isPermaLink="true">http://localhost:4000/archivers/BOJ14918</guid>
+        
+        
+      </item>
     
       <item>
         <title>[백준] 나는 행복합니다~ (14652)(kotlin)</title>
@@ -553,53 +564,6 @@
         <pubDate>Thu, 03 Dec 2020 00:00:00 +0900</pubDate>
         <link>http://localhost:4000/archivers/BOJ5522</link>
         <guid isPermaLink="true">http://localhost:4000/archivers/BOJ5522</guid>
-        
-        <category>algorithm</category>
-        
-        <category>kotlin</category>
-        
-        
-        <category>boj</category>
-        
-      </item>
-    
-      <item>
-        <title>[백준] 콜센터 (5339)(kotlin)</title>
-        <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/5339&quot;&gt;원본 문제&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;문제-설명&quot;&gt;문제 설명&lt;/h3&gt;
-
-&lt;p&gt;스타워즈에 등장하는 로봇인 C3PO는 요즘 콜센터에 근무하고 있다. 콜센터에 앉아있는 C3PO를 그리는 프로그램을 작성하시오.&lt;/p&gt;
-
-&lt;h3 id=&quot;출력&quot;&gt;출력&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;예제 출력처럼 콜센터에 앉아있는 C3PO를 출력한다. 마지막 세 줄의 두 ‘&lt;/td&gt;
-      &lt;td&gt;’ 사이에는 공백이 10개 있다.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;문제-풀이1&quot;&gt;문제 풀이1&lt;/h3&gt;
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;run&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;     /~\\\n&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt;
-            &lt;span class=&quot;s&quot;&gt;&quot;    ( oo|\n&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt;
-            &lt;span class=&quot;s&quot;&gt;&quot;    _\\=/_\n&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt;
-            &lt;span class=&quot;s&quot;&gt;&quot;   /  _  \\\n&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt;
-            &lt;span class=&quot;s&quot;&gt;&quot;  //|/.\\|\\\\\n&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt;
-            &lt;span class=&quot;s&quot;&gt;&quot; ||  \\ /  ||\n&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt;
-            &lt;span class=&quot;s&quot;&gt;&quot;============\n&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt;
-            &lt;span class=&quot;s&quot;&gt;&quot;|          |\n&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt;
-            &lt;span class=&quot;s&quot;&gt;&quot;|          |\n&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt;
-            &lt;span class=&quot;s&quot;&gt;&quot;|          |&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-        <pubDate>Thu, 03 Dec 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/archivers/BOJ5339</link>
-        <guid isPermaLink="true">http://localhost:4000/archivers/BOJ5339</guid>
         
         <category>algorithm</category>
         
