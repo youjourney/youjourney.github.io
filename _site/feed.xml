@@ -5,8 +5,8 @@
     <description>Developer blog</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 09 Dec 2020 10:39:07 +0900</pubDate>
-    <lastBuildDate>Wed, 09 Dec 2020 10:39:07 +0900</lastBuildDate>
+    <pubDate>Wed, 09 Dec 2020 10:40:33 +0900</pubDate>
+    <lastBuildDate>Wed, 09 Dec 2020 10:40:33 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -43,6 +43,15 @@
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
+
+&lt;h3 id=&quot;hints&quot;&gt;Hints&lt;/h3&gt;
+&lt;h2 id=&quot;input-details&quot;&gt;Input Details&lt;/h2&gt;
+
+&lt;p&gt;Bessie ends the contest on November 12, at 13:14 (that is, at 1:14 PM).&lt;/p&gt;
+
+&lt;h2 id=&quot;output-details&quot;&gt;Output Details&lt;/h2&gt;
+
+&lt;p&gt;Bessie ends the contest 1563 minutes after she starts.&lt;/p&gt;
 
 &lt;h3 id=&quot;문제-풀이1&quot;&gt;문제 풀이1&lt;/h3&gt;
 &lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.text.SimpleDateFormat&lt;/span&gt;
