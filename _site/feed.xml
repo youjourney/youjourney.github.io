@@ -3,10 +3,10 @@
   <channel>
     <title>Youjourney Blog</title>
     <description>Developer blog</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 29 Dec 2020 18:33:09 +0900</pubDate>
-    <lastBuildDate>Tue, 29 Dec 2020 18:33:09 +0900</lastBuildDate>
+    <link>http://0.0.0.0:4000/</link>
+    <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 29 Dec 2020 18:33:24 +0900</pubDate>
+    <lastBuildDate>Tue, 29 Dec 2020 18:33:24 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -140,8 +140,8 @@ Crawler.kt:10의 “사용자계정”은 모두 다 다르므로 자신의 사�
 크롬 웹드라이버 설명(공식) : “https://chromedriver.chromium.org/getting-started”&lt;br /&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 29 Dec 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/archivers/TECH1</link>
-        <guid isPermaLink="true">http://localhost:4000/archivers/TECH1</guid>
+        <link>http://0.0.0.0:4000/archivers/TECH1</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/archivers/TECH1</guid>
         
         <category>crawler</category>
         
@@ -235,8 +235,8 @@ Crawler.kt:10의 “사용자계정”은 모두 다 다르므로 자신의 사�
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Wed, 16 Dec 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/archivers/BOJ16727</link>
-        <guid isPermaLink="true">http://localhost:4000/archivers/BOJ16727</guid>
+        <link>http://0.0.0.0:4000/archivers/BOJ16727</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/archivers/BOJ16727</guid>
         
         <category>algorithm</category>
         
@@ -313,8 +313,8 @@ Crawler.kt:10의 “사용자계정”은 모두 다 다르므로 자신의 사�
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Tue, 15 Dec 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/archivers/BOJ16693</link>
-        <guid isPermaLink="true">http://localhost:4000/archivers/BOJ16693</guid>
+        <link>http://0.0.0.0:4000/archivers/BOJ16693</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/archivers/BOJ16693</guid>
         
         <category>algorithm</category>
         
@@ -405,8 +405,8 @@ Crawler.kt:10의 “사용자계정”은 모두 다 다르므로 자신의 사�
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Tue, 15 Dec 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/archivers/BOJ16648</link>
-        <guid isPermaLink="true">http://localhost:4000/archivers/BOJ16648</guid>
+        <link>http://0.0.0.0:4000/archivers/BOJ16648</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/archivers/BOJ16648</guid>
         
         <category>algorithm</category>
         
@@ -474,8 +474,8 @@ Crawler.kt:10의 “사용자계정”은 모두 다 다르므로 자신의 사�
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Tue, 15 Dec 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/archivers/BOJ16600</link>
-        <guid isPermaLink="true">http://localhost:4000/archivers/BOJ16600</guid>
+        <link>http://0.0.0.0:4000/archivers/BOJ16600</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/archivers/BOJ16600</guid>
         
         <category>algorithm</category>
         
@@ -537,8 +537,8 @@ Crawler.kt:10의 “사용자계정”은 모두 다 다르므로 자신의 사�
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Tue, 15 Dec 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/archivers/BOJ16486</link>
-        <guid isPermaLink="true">http://localhost:4000/archivers/BOJ16486</guid>
+        <link>http://0.0.0.0:4000/archivers/BOJ16486</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/archivers/BOJ16486</guid>
         
         <category>algorithm</category>
         
@@ -664,8 +664,8 @@ Crawler.kt:10의 “사용자계정”은 모두 다 다르므로 자신의 사�
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Tue, 15 Dec 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/archivers/BOJ16431</link>
-        <guid isPermaLink="true">http://localhost:4000/archivers/BOJ16431</guid>
+        <link>http://0.0.0.0:4000/archivers/BOJ16431</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/archivers/BOJ16431</guid>
         
         <category>algorithm</category>
         
@@ -776,8 +776,8 @@ Crawler.kt:10의 “사용자계정”은 모두 다 다르므로 자신의 사�
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Tue, 15 Dec 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/archivers/BOJ16428</link>
-        <guid isPermaLink="true">http://localhost:4000/archivers/BOJ16428</guid>
+        <link>http://0.0.0.0:4000/archivers/BOJ16428</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/archivers/BOJ16428</guid>
         
         <category>algorithm</category>
         
@@ -857,8 +857,8 @@ Crawler.kt:10의 “사용자계정”은 모두 다 다르므로 자신의 사�
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Tue, 15 Dec 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/archivers/BOJ16204</link>
-        <guid isPermaLink="true">http://localhost:4000/archivers/BOJ16204</guid>
+        <link>http://0.0.0.0:4000/archivers/BOJ16204</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/archivers/BOJ16204</guid>
         
         <category>algorithm</category>
         
@@ -971,8 +971,8 @@ Crawler.kt:10의 “사용자계정”은 모두 다 다르므로 자신의 사�
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Tue, 15 Dec 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/archivers/BOJ16199</link>
-        <guid isPermaLink="true">http://localhost:4000/archivers/BOJ16199</guid>
+        <link>http://0.0.0.0:4000/archivers/BOJ16199</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/archivers/BOJ16199</guid>
         
         <category>algorithm</category>
         
