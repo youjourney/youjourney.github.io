@@ -5,8 +5,8 @@
     <description>Developer blog</description>
     <link>http://0.0.0.0:4000/</link>
     <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 29 Dec 2020 18:33:24 +0900</pubDate>
-    <lastBuildDate>Tue, 29 Dec 2020 18:33:24 +0900</lastBuildDate>
+    <pubDate>Tue, 29 Dec 2020 18:37:28 +0900</pubDate>
+    <lastBuildDate>Tue, 29 Dec 2020 18:37:28 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -15,7 +15,7 @@
 
 &lt;h1&gt;macOS 11.1 (Intel Mac) 기준&lt;/h1&gt;
 
-&lt;h4 id=&quot;사전-설치셋팅된-개발환경&quot;&gt;사전 설치셋팅된 개발환경&lt;/h4&gt;
+&lt;h4 id=&quot;사전-설치된-개발환경&quot;&gt;사전 설치된 개발환경&lt;/h4&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;인텔리제이(IntelliJ 2020.3)&lt;br /&gt;
