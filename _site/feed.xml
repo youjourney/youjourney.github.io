@@ -5,12 +5,12 @@
     <description>Developer blog</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 12 Jan 2021 11:35:42 +0900</pubDate>
-    <lastBuildDate>Tue, 12 Jan 2021 11:35:42 +0900</lastBuildDate>
+    <pubDate>Tue, 12 Jan 2021 11:41:40 +0900</pubDate>
+    <lastBuildDate>Tue, 12 Jan 2021 11:41:40 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
-        <title>[백준]${title[1]} (17362)(kotlin)</title>
+        <title>[백준] 수학은 체육과목 입니다 2 (17362)(kotlin)</title>
         <description>&lt;h3 id=&quot;문제-설명&quot;&gt;문제 설명&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/17362#description&quot;&gt;백준 17362번 문제 링크&lt;/a&gt;&lt;/p&gt;
 
@@ -23,7 +23,7 @@
 
 &lt;h3 id=&quot;예제-입출력&quot;&gt;예제 입출력&lt;/h3&gt;
 &lt;p&gt;|입력|출력|
-|—|—|
+|—–|—–|
 |3|3|
 |1000|2|&lt;/p&gt;
 
