@@ -5,8 +5,8 @@
     <description>Developer blog</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 13 Jan 2021 12:13:01 +0900</pubDate>
-    <lastBuildDate>Wed, 13 Jan 2021 12:13:01 +0900</lastBuildDate>
+    <pubDate>Wed, 13 Jan 2021 12:27:24 +0900</pubDate>
+    <lastBuildDate>Wed, 13 Jan 2021 12:27:24 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -152,6 +152,17 @@ macOS의 기본 응용프로그램인 터미널(Terminal)를 열고 다음과 �
         <category>tech</category>
         
         <category>boj</category>
+        
+      </item>
+    
+      <item>
+        <title>Boj17863</title>
+        <description>
+</description>
+        <pubDate>Wed, 13 Jan 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/archivers/BOJ17863</link>
+        <guid isPermaLink="true">http://localhost:4000/archivers/BOJ17863</guid>
+        
         
       </item>
     
@@ -598,7 +609,9 @@ selenium-java (4.0.0-alpha-7)&lt;br /&gt;&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;crawlerkt-소스파일ver20210112-2&quot;&gt;Crawler.kt 소스파일(ver.20210112-2)&lt;/h4&gt;
-&lt;p&gt;’'’kotlin
+&lt;p&gt;&lt;strong&gt;알림&lt;/strong&gt;&lt;br /&gt;
+마크다운 문서 내부에 -표시에 대한 오류 수정&lt;br /&gt;
+‘'’kotlin
 package com&lt;/p&gt;
 
 &lt;p&gt;import org.openqa.selenium.By
@@ -809,6 +822,251 @@ private fun loadKtSource() : String {
     }
 
     return str.joinToString(&quot;\n&quot;)
+}
+
+fun makeMDFile() {
+    val currentDateTime: Date = Calendar.getInstance().time
+    val dateFormat: SimpleDateFormat = SimpleDateFormat(&quot;yyyy-MM-dd&quot;)
+    val path = &quot;마크다운 파일이 저장될 폴더 위치&quot;
+    //val path = &quot;/Users/사용자폴더/Documents/GIT_youjourney.github.io/_posts/&quot;
+    val fileName = &quot;${dateFormat.format(currentDateTime)}-BOJ${problem}.md&quot;
+    println(&quot;Making ${fileName}...&quot;)
+
+    try {
+        val fw = FileWriter(path + fileName)
+        val bw = BufferedWriter(fw)
+
+        bw.write(makeMDFrontMatters() + makeMDBody() + loadKtSource())
+        bw.close()
+        fw.close()
+    } catch (e: Exception) {
+        println(&quot;Can't write the ${dateFormat.format(currentDateTime)}-${problem}.md&quot;)
+        e.printStackTrace()
+    } finally {
+        println(&quot;$fileName is made successfully!&quot;)
+        //println(&quot;File is written at : /Users/사용자명/Documents/GIT_youjourney.github.io/_posts/${dateFormat.format(currentDateTime)}-${problem}.md&quot;)
+    }
+
+    if (doubleCheck) {
+        println(&quot;Double Check is enabled. Checking now.&quot;)
+        println(&quot;======================================&quot;)
+        try {
+            val file = File(path + fileName)
+            val fr = FileReader(file)
+            val br = BufferedReader(fr)
+
+            br.forEachLine { println(it) }
+            br.close()
+            fr.close()
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+} }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;fun main(args: Array&lt;String&gt;) {
+    val doubleCheck: Boolean = args[1]
+        .let {
+            when (it.toLowerCase()) {
+                &quot;true&quot; -&amp;gt; true
+                else -&amp;gt; false
+            }
+        }
+    val crawler: BOJCrawler = BOJCrawler(args[0], doubleCheck)&lt;/String&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;crawler.makeMDFile() } '''
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;crawlerkt-소스파일ver20210113-1&quot;&gt;Crawler.kt 소스파일(ver.20210113-1)&lt;/h4&gt;
+&lt;p&gt;’'’kotlin
+package com&lt;/p&gt;
+
+&lt;p&gt;import org.openqa.selenium.By
+import org.openqa.selenium.WebDriverException
+import org.openqa.selenium.edge.EdgeDriver
+import org.openqa.selenium.edge.EdgeOptions
+import java.io.File
+import java.io.FileReader
+import java.io.FileWriter
+import java.io.BufferedReader
+import java.io.BufferedWriter
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Calendar
+import kotlin.Exception&lt;/p&gt;
+
+&lt;p&gt;class BOJCrawler(private val problem: String, private val doubleCheck: Boolean) {
+    private val webDriverID = “webdriver.edge.driver”
+    private val webDriverPath = “웹드라이버의 경로”
+    //private val webDriverPath = “/Users/사용자폴더/Downloads/edgedriver_mac64/msedgedriver”
+    private val options: EdgeOptions = EdgeOptions()
+    private val driver: EdgeDriver by lazy { EdgeDriver(options) }&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;init {
+    println(&quot;init. Crawler initializing...&quot;)
+    System.setProperty(webDriverID, webDriverPath)
+    options.addArguments(&quot;headless&quot;)
+    options.addArguments(&quot;window-size=1920x1080&quot;)
+    options.addArguments(&quot;disable-gpu&quot;)
+    options.addArguments(&quot;disable-infobars&quot;)
+    options.addArguments(&quot;--disable-extensions&quot;)
+    options.addArguments(&quot;--disable-default-apps&quot;)
+
+    getProblem()
+}
+
+private fun getProblem() {
+    val url = &quot;https://www.acmicpc.net/problem/&quot;
+    println(&quot;Crawling from ${url}${problem}&quot;)
+
+
+    try {
+        println(&quot;Loading Edge driver...&quot;)
+        driver.get(&quot;${url}${problem}&quot;)
+    } catch (e: WebDriverException) {
+        println(e)
+    }
+}
+
+private fun makeMDFrontMatters(): String {
+    println(&quot;Building markdown file front matters...&quot;)
+    val strArr = mutableListOf&amp;lt;String&amp;gt;()
+
+    //begin frontmatters
+    strArr.add(&quot;---&quot;)
+
+    //title
+    strArr.add(
+        let {
+            val title = driver
+                .title
+                .split(&quot;번:&quot;)
+                .map { it.trim() }
+
+            &quot;title: \&quot;[백준] ${title[1]} (${title[0]})(kotlin)\&quot;&quot;
+        }
+    )
+
+    //excerpt
+    strArr.add(
+        let {
+            val description = driver
+                .findElement(By.xpath(&quot;/html/body/div[2]/div[2]/div[3]/div[5]/div[1]/section/div[2]&quot;))
+                .text
+                .split(&quot;.&quot;)[0]
+                .replace(&quot;\n&quot;, &quot; &quot;) + &quot;.&quot;
+
+            &quot;excerpt: \&quot;$description\&quot;&quot;
+        }
+    )
+
+    //categories
+    strArr.add(&quot;categories:\n- boj&quot;)
+
+    //tags
+    strArr.add(&quot;tags:\n- algorithm\n- kotlin&quot;)
+
+    //last_modified_at
+    strArr.add(
+        let {
+            val currentDateTime: Date = Calendar.getInstance().time
+            val dateFormat: SimpleDateFormat = SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss+09:00&quot;)
+
+            &quot;last_modified_at: ${dateFormat.format(currentDateTime)}&quot;
+        }
+    )
+
+    //end of frontmatters
+    strArr.add(&quot;---&quot;)
+    return strArr.joinToString(&quot;\n&quot;, &quot;&quot;, &quot;\n&quot;)
+}
+
+private fun makeMDBody(): String {
+    println(&quot;Building markdown body...&quot;)
+    val strArr = mutableListOf&amp;lt;String&amp;gt;()
+
+    fun br3() = strArr.add(&quot;\n\n\n&quot;)
+    fun br2() = strArr.add(&quot;\n\n&quot;)
+    fun br1() = strArr.add(&quot;\n&quot;)
+
+    //문제 설명
+    br1()
+    strArr.add(&quot;### 문제 설명&quot;)
+    strArr.add(&quot;[백준 ${problem}번 문제 링크](https://www.acmicpc.net/problem/${problem}#description)&quot;)
+    br3()
+
+    //문제 입출력 설명
+    val problem_input = driver.findElement(By.id(&quot;problem_input&quot;)).text
+    val problem_output = driver.findElement(By.id(&quot;problem_output&quot;)).text
+    strArr.add(&quot;### 입력 및 출력&quot;)
+    if (problem_input != &quot;&quot;) {
+        strArr.add(&quot;#### &amp;gt;&amp;gt; 입력&quot;)
+        strArr.add(driver.findElement(By.id(&quot;problem_input&quot;)).text.replace(&quot;-&quot;, &quot;\\-&quot;))
+        br2()
+    }
+    if (problem_output != &quot;&quot;) {
+        strArr.add(&quot;#### &amp;gt;&amp;gt; 출력&quot;)
+        strArr.add(driver.findElement(By.id(&quot;problem_output&quot;)).text.replace(&quot;-&quot;, &quot;\\-&quot;))
+        br2()
+    }
+    br1()
+
+    //문제 제한 설명
+    val problem_limit = driver.findElement(By.id(&quot;problem_limit&quot;)).text
+    if (problem_limit != &quot;&quot;) {
+        strArr.add(&quot;### 제한 사항&quot;)
+        br1()
+        strArr.add(problem_limit.replace(&quot;-&quot;, &quot;\\-&quot;))
+        br3()
+    }
+
+    //문제 예제 입출력
+    var sample_input_count = 1
+    while (true) {
+        try {
+            driver.findElement(By.id(&quot;sample-input-${sample_input_count}&quot;))
+            sample_input_count++
+        } catch (e: WebDriverException) {
+            sample_input_count--
+            break
+        }
+    }
+
+    if (sample_input_count != 0) {
+        strArr.add(&quot;### 예제 입출력&quot;)
+        br1()
+        strArr.add(&quot;|입력|출력|&quot;)
+        strArr.add(&quot;|-----|------|&quot;)
+        for (count in 1..sample_input_count) {
+            val input = driver.findElement(By.id(&quot;sample-input-$count&quot;))
+                .text
+                .let {
+                    it.replace(&quot;\n&quot;, &quot;&amp;lt;br&amp;gt;&quot;)
+                }
+                .replace(&quot;-&quot;, &quot;\\-&quot;)
+            val output = driver.findElement(By.id(&quot;sample-output-$count&quot;))
+                .text
+                .let {
+                    it.replace(&quot;\n&quot;, &quot;&amp;lt;br&amp;gt;&quot;)
+                }
+                .replace(&quot;-&quot;, &quot;\\-&quot;)
+            strArr.add(&quot;|$input|$output|&quot;)
+        }
+        br3()
+    }
+
+    //문제 힌트
+    val problem_hint = driver.findElement(By.id(&quot;problem_hint&quot;)).text
+    if (problem_hint != &quot;&quot;) {
+        strArr.add(&quot;### 문제 힌트&quot;)
+        br1()
+        strArr.add(problem_hint.replace(&quot;-&quot;, &quot;\\-&quot;))
+        br3()
+    }
+
+    driver.close()
+    return strArr.joinToString(&quot;\n&quot;, &quot;&quot;, &quot;\n&quot;)
 }
 
 fun makeMDFile() {
@@ -1374,75 +1632,6 @@ Crawler.kt:10의 “사용자계정”은 모두 다 다르므로 자신의 사�
         <pubDate>Tue, 15 Dec 2020 00:00:00 +0900</pubDate>
         <link>http://localhost:4000/archivers/BOJ16648</link>
         <guid isPermaLink="true">http://localhost:4000/archivers/BOJ16648</guid>
-        
-        <category>algorithm</category>
-        
-        <category>kotlin</category>
-        
-        
-        <category>boj</category>
-        
-      </item>
-    
-      <item>
-        <title>[백준] Contemporary Art (16600)(kotlin)</title>
-        <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/16600&quot;&gt;원본 문제&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;문제-설명&quot;&gt;문제 설명&lt;/h3&gt;
-
-&lt;p&gt;At the Van Abbemuseum of modern and contemporary art in Eindhoven, we always look to present our muses in the most interesting way possible. Sometimes we have our work cut out for us.&lt;/p&gt;
-
-&lt;p&gt;Today we are exploring whether we can modify one of our perfectly-square picture frames (such as the one shown in Figure C.1) to include an electrical filament. The purpose of this filament is so that the image can set itself alight at some opportune and hilarious moment—for example, in the middle of a sale by auction.&lt;/p&gt;
-
-&lt;p&gt;You will be responsible for buying the filament to run around the entire perimeter of the artwork. How many centimetres will you need to obtain?&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/BOJ16600-1.png&quot; alt=&quot;Figure C.1&quot; /&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align: center;&quot;&gt;Figure C.1: A test subject for the frame.&lt;/p&gt;
-
-&lt;h3 id=&quot;입력&quot;&gt;입력&lt;/h3&gt;
-
-&lt;p&gt;The input consists of:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;One line with an integer a (1 ≤ a ≤ 10^18), the area of the image in square centimetres.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;출력&quot;&gt;출력&lt;/h3&gt;
-
-&lt;p&gt;Output the total length of filament needed for the frame, in centimetres. Your answer should have an absolute or relative error of at most 10^-6.&lt;/p&gt;
-
-&lt;h3 id=&quot;테스트-케이스&quot;&gt;테스트 케이스&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;입력&lt;/th&gt;
-      &lt;th&gt;출력&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;64&lt;/td&gt;
-      &lt;td&gt;32.0&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;1234&lt;/td&gt;
-      &lt;td&gt;140.51334456&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;문제-풀이1&quot;&gt;문제 풀이1&lt;/h3&gt;
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;kotlin.math.sqrt&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%.6f&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;readLine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;toFloat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-        <pubDate>Tue, 15 Dec 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/archivers/BOJ16600</link>
-        <guid isPermaLink="true">http://localhost:4000/archivers/BOJ16600</guid>
         
         <category>algorithm</category>
         
