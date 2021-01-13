@@ -5,8 +5,8 @@
     <description>Developer blog</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 13 Jan 2021 13:04:48 +0900</pubDate>
-    <lastBuildDate>Wed, 13 Jan 2021 13:04:48 +0900</lastBuildDate>
+    <pubDate>Wed, 13 Jan 2021 13:10:04 +0900</pubDate>
+    <lastBuildDate>Wed, 13 Jan 2021 13:10:04 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -156,13 +156,74 @@ macOS의 기본 응용프로그램인 터미널(Terminal)를 열고 다음과 �
       </item>
     
       <item>
-        <title>Boj18330</title>
+        <title>Boj19602</title>
         <description>
+</description>
+        <pubDate>Wed, 13 Jan 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/archivers/BOJ19602</link>
+        <guid isPermaLink="true">http://localhost:4000/archivers/BOJ19602</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>[백준] Petrol (18330)(kotlin)</title>
+        <description>&lt;h3 id=&quot;문제-설명&quot;&gt;문제 설명&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/18330#description&quot;&gt;백준 18330번 문제 링크&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;입력-및-출력&quot;&gt;입력 및 출력&lt;/h3&gt;
+&lt;h4 id=&quot;-입력&quot;&gt;» 입력&lt;/h4&gt;
+&lt;p&gt;The input consists of two lines. The first line contains an integer n (0 ⩽ n ⩽ 200), specifying the amount of petrol that will be used in the next month. The second line contains an integer k (0 ⩽ k ⩽ 360), showing the quota left in Mahya’s fuel card at the end of current month.&lt;/p&gt;
+
+&lt;h4 id=&quot;-출력&quot;&gt;» 출력&lt;/h4&gt;
+&lt;p&gt;Print the amount of money (in Oshloobs) that Mahya will pay for petrol in the next month.&lt;/p&gt;
+
+&lt;h3 id=&quot;예제-입출력&quot;&gt;예제 입출력&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;입력&lt;/th&gt;
+      &lt;th&gt;출력&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;41&lt;br /&gt;0&lt;/td&gt;
+      &lt;td&gt;61500&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;125&lt;br /&gt;40&lt;/td&gt;
+      &lt;td&gt;225000&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;문제-풀이1&quot;&gt;문제 풀이1&lt;/h3&gt;
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.Scanner&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Scanner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;`in`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;petrolNextMonth&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;nextInt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;quotaLeft&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;nextInt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;nextMonthPetrolNeeds&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;quotaLeft&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;60&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;petrolNextMonth&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nextMonthPetrolNeeds&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;petrolNextMonth&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1500&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;quotaLeft&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;60&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;petrolNextMonth&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;quotaLeft&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;60&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Wed, 13 Jan 2021 00:00:00 +0900</pubDate>
         <link>http://localhost:4000/archivers/BOJ18330</link>
         <guid isPermaLink="true">http://localhost:4000/archivers/BOJ18330</guid>
         
+        <category>algorithm</category>
+        
+        <category>kotlin</category>
+        
+        
+        <category>boj</category>
         
       </item>
     
@@ -1409,182 +1470,6 @@ fun makeMDFile() {
         
         
         <category>boj</category>
-        
-      </item>
-    
-      <item>
-        <title>코틀린(kotlin)으로 셀레니움(selenium)과 엣지(edge)를 이용해 크롤링(crawling)하기</title>
-        <description>&lt;h3 id=&quot;개요&quot;&gt;개요&lt;/h3&gt;
-
-&lt;p&gt;인텔리제이에서 코틀린과 jsoup으로 웹크롤링을 하던 중, 해결할 수 없는 부분이 발생해
-조금 더 직관적이고 정확한 셀레니움(selenium) 크롤링을 시도하게 됐습니다.&lt;br /&gt;
-엣지브라우저(Microsoft Edge Browser)를 사용하여, 기상청에서 현재 기온을 읽어오는 간단한 예제 구현을 통해서 셀레니움의 사용법을 익히는 것을 목표로 합니다.&lt;br /&gt;
-&lt;br /&gt;
-셀레니움은 대표적으로 크롬(Google Chrome)이외 인터넷익스플로러(Microsoft Internet Explorer), 사파리(Apple Safari), 불여우(Mozila Firefox)등
-거의 모든 웹브라우저를 지원하지만, 이 글에서 엣지(Microsoft Edge)를 사용하여 크롤링하는 특별한 이유는 없습니다.&lt;br /&gt;
-그냥 제가 엣지를 주력으로 사용하고 크롬과 사용법이 다르지 않기 때문입니다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;개발환경&quot;&gt;개발환경&lt;/h3&gt;
-
-&lt;h1&gt;macOS 11.1 (Intel Mac) 기준&lt;/h1&gt;
-
-&lt;h4 id=&quot;사전-설치된-개발환경&quot;&gt;사전 설치된 개발환경&lt;/h4&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;인텔리제이(IntelliJ 2020.3)&lt;br /&gt;
-OpenJDK-15.0.1&lt;br /&gt;
-Microsoft Edge Browser(87.0.664.66)&lt;br /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h4 id=&quot;추가-설치될-개발환경&quot;&gt;추가 설치될 개발환경&lt;/h4&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Microsoft Edge WebDriver(87.0.664.66)&lt;br /&gt;
-selenium-java (4.0.0-alpha-7)&lt;br /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;개발환경-설정&quot;&gt;개발환경 설정&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/TECH1/1.png&quot; alt=&quot;엣지 브라우저 버젼 확인&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/TECH1/2.png&quot; alt=&quot;엣지 드라이버 다운로드&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/TECH1/12.png&quot; alt=&quot;셀레니움(JAVA) 다운로드&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;edge://settings/help&quot;&gt;Microsoft Edge 버젼&lt;/a&gt;을 확인하고, 해당 버젼과 동일한 &lt;a href=&quot;https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/&quot;&gt;Edge WebDriver&lt;/a&gt;를 다운로드 받습니다.&lt;br /&gt;
-&lt;a href=&quot;https://www.selenium.dev/downloads/&quot;&gt;셀레니움(selenium) Java&lt;/a&gt;를 다운로드 받습니다.&lt;br /&gt;
-(Microsoft에 따르면 셀레니움은 크로미움 엣지를 공식지원하는 4.0.0-alpha-5 이후 버젼을 권장한다고 합니다)&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;인텔리제이-프로젝트-만들기&quot;&gt;인텔리제이 프로젝트 만들기&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/TECH1/3.png&quot; alt=&quot;인텔리제이 실행&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/TECH1/4.png&quot; alt=&quot;인텔리제이 프로젝트 생성1&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/TECH1/5.png&quot; alt=&quot;인텔리제이 프로젝트 생성2&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/TECH1/6.png&quot; alt=&quot;인텔리제이 그래들 디펜던시 추가&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;인텔리제이를 실행하여 Kotlin-Gradle groovy-runtime(OpenJDK15) 프로젝트를 생성합니다.&lt;br /&gt;
-프로젝트를 생성한 후 build.gradle의 dependencies을 다음과 같이 변경합니다.&lt;br /&gt;&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dependencies {
-    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.0.0-alpha-7'
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;내용 추가 후 Load Gradle Change(Shift + CMD + L)를 합니다.&lt;br /&gt;
-디펜던시가 로드된 후,&lt;br /&gt;
-src -&amp;gt; main -&amp;gt; kotlin에 “Crawler.kt” 파일을 생성합니다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/TECH1/8.png&quot; alt=&quot;인텔리제이 소스파일 생성&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;“Crawler.kt”의 내용은 아래 내용을 복사합니다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Crawler.kt 소스파일&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.openqa.selenium.By&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.openqa.selenium.WebElement&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.openqa.selenium.edge.EdgeDriver&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.openqa.selenium.edge.EdgeOptions&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.lang.Exception&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;//프로퍼티 설정하기&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;webDriverID&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;webdriver.edge.driver&quot;&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;webDriverPath&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;/Users/사용자계정/Downloads/edgedriver_mac64/msedgedriver&quot;&lt;/span&gt;
-    &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;webDriverID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;webDriverPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;//엣지드라이버 옵션 설정하기&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;EdgeOptions&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;EdgeOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;addArguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;--start-maximized&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;addArguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;--disable-popup-blocking&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;addArguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;--disable-default-apps&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;//옵션이 적용된 엣지드라이버 불러오기&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;EdgeDriver&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;EdgeDriver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;//엣지드라이버로 기상청 메인화면(크롤링할 페이지) 띄우기(가져오기)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://www.weather.go.kr/w/index.do&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-        &lt;span class=&quot;c1&quot;&gt;//현재 날씨부분만 가져오기&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;doc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;WebElement&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;findElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-            &lt;span class=&quot;nc&quot;&gt;By&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;xpath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/html/body/div[2]/section/div/div[2]/div[2]/div/div/div[2]/div/div[5]/div[1]/div/div/div[1]/div&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-        &lt;span class=&quot;c1&quot;&gt;//가져온 현재 날씨를 콘솔로그에 출력&lt;/span&gt;
-        &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;doc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Exception&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;printStackTrace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;finally&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;//사용이 끝난 엣지드라이버 종&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;기상청에서-크롤링할-부분-퍼오기찾기&quot;&gt;기상청에서 크롤링할 부분 퍼오기(찾기)&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/TECH1/9.png&quot; alt=&quot;엣지로 기상청 홈페이지 엘리먼트검사1&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/TECH1/10.png&quot; alt=&quot;엣지로 기상청 홈페이지 엘리먼트검사2&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;xpath 가져오기&lt;/strong&gt;&lt;br /&gt;
-엣지로 기상청 홈페이지에 접속하여,&lt;br /&gt;
-이미지와 같은 방법으로 현재 날씨의 요소 검사를 시행한 뒤&lt;br /&gt;
-해당 요소의 xpath를 복사합니다.&lt;br /&gt;
-이미지와 같이 현재 날씨를 읽어오고 싶다면, Crawler.kt:28의&lt;br /&gt;
-“/html/body/div[2]/section/div/div[2]/div[2]/div/div/div[2]/div/div[5]/div[1]/div/div/div[1]/div”과 같겠지만&lt;br /&gt;
-혹여나 다른 날씨정보를 가져오고 싶다면 복사한 xpath를 Crawler.kt:28의 By.xpath(“이곳에 복사”)해야 합니다.&lt;br /&gt;&lt;br /&gt;
-&lt;strong&gt;Edge WebDriver 경로 가져오기&lt;/strong&gt;&lt;br /&gt;
-셀레니움이 엣지브라우져를 가상으로 돌리기 위해, 엣지 웹드라이버가 필요합니다.&lt;br /&gt;
-이 웹드라이버는 가장 위 단계에서 Mac에 설치된 엣지브라우저 버젼과 동일한 버젼으로 받은 파일입니다.&lt;br /&gt;
-일반적으로 다운로드 경로를 수정하지 않았다면, 엣지 웹드라이버가 Crawler.kt:10과 같습니다.&lt;br /&gt;
-Crawler.kt:10의 “사용자계정”은 모두 다 다르므로 자신의 사용자계정을 넣으면 됩니다.&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-여기까지 모든 준비가 완료됐다면,&lt;br /&gt;
-해당 소스를 Run(CMD + Option + R 혹은 메뉴(Run) -&amp;gt; Run)합니다.&lt;br /&gt;
-&lt;img src=&quot;/images/TECH1/11.png&quot; alt=&quot;셀레니움을 통한 기상청 날씨 읽어오기&quot; /&gt;
-여기까지 아주 기본적인 셀레니움 + 엣지드라이버 사용법이었습니다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;기타-셀레니움-사용관련-정보&quot;&gt;기타 셀레니움 사용관련 정보&lt;/h3&gt;
-
-&lt;p&gt;셀레니움 홈페이지 : “https://www.selenium.dev/”&lt;br /&gt;
-셀레니움 다운로드 : “https://www.selenium.dev/downloads/”&lt;br /&gt;
-셀레니움 공식 문서(한글) : “https://www.selenium.dev/documentation/ko/getting_started/”&lt;br /&gt;
-셀레니움 메이븐 레포지토리 : “https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java”&lt;br /&gt;
-엣지 웹드라이버 설명(공식) : “https://docs.microsoft.com/en-us/microsoft-edge/webdriver-chromium/?tabs=c-sharp”&lt;br /&gt;
-크롬 웹드라이버 설명(공식) : “https://chromedriver.chromium.org/getting-started”&lt;br /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 29 Dec 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/archivers/TECH1</link>
-        <guid isPermaLink="true">http://localhost:4000/archivers/TECH1</guid>
-        
-        <category>crawler</category>
-        
-        <category>crawling</category>
-        
-        <category>web</category>
-        
-        <category>selenium</category>
-        
-        <category>edgedriver</category>
-        
-        <category>kotlin</category>
-        
-        <category>gradle</category>
-        
-        
-        <category>tech</category>
         
       </item>
     
