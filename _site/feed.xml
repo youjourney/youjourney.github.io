@@ -5,8 +5,8 @@
     <description>Developer blog</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 13 Jan 2021 11:36:25 +0900</pubDate>
-    <lastBuildDate>Wed, 13 Jan 2021 11:36:25 +0900</lastBuildDate>
+    <pubDate>Wed, 13 Jan 2021 11:38:32 +0900</pubDate>
+    <lastBuildDate>Wed, 13 Jan 2021 11:38:32 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -30,7 +30,7 @@ selenium-java (4.0.0-alpha-7)&lt;br /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;기타-셀레니움-사용관련-정보-및-이전-내용&quot;&gt;기타 셀레니움 사용관련 정보 및 이전 내용&lt;/h3&gt;
 &lt;p&gt;셀레니움 크롤러 설치 및 세팅방법은 &lt;a href=&quot;/archivers/TECH1&quot;&gt;여기&lt;/a&gt;&lt;br /&gt;
-백준 크롤링 및 마크다운 파일 생성기 &lt;a href=&quot;/archivers/TECH2&quot;&gt;여기를 클릭하세요&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
+백준 크롤링 및 마크다운 파일 생성기 &lt;a href=&quot;/archivers/TECH2&quot;&gt;여기&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;ide인텔리제이-gradle-프로젝트-수정하기&quot;&gt;IDE(인텔리제이) gradle 프로젝트 수정하기&lt;/h3&gt;
 &lt;h4 id=&quot;kotlin-소스파일-위치-변경&quot;&gt;kotlin 소스파일 위치 변경&lt;/h4&gt;
@@ -47,8 +47,7 @@ src/main/kotlin/Crawler.kt를 com의 하위인 src/main/kotlin/com/Crawler.kt로
 &lt;/blockquote&gt;
 
 &lt;h4 id=&quot;buildgradle-수정하기하고-빌드&quot;&gt;build.gradle 수정하기하고 빌드&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;/images/TECH3/2.png&quot; alt=&quot;그림2&quot; /&gt;
-&lt;img src=&quot;/images/TECH3/3.png&quot; alt=&quot;그림3&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;/images/TECH3/3.png&quot; alt=&quot;그림3&quot; /&gt;
 ‘'’kotlin
 buildscript {
     ext.kotlin_version = ‘1.4.21’&lt;/p&gt;
