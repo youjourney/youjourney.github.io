@@ -5,8 +5,8 @@
     <description>Developer blog</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 13 Jan 2021 11:38:32 +0900</pubDate>
-    <lastBuildDate>Wed, 13 Jan 2021 11:38:32 +0900</lastBuildDate>
+    <pubDate>Wed, 13 Jan 2021 11:49:42 +0900</pubDate>
+    <lastBuildDate>Wed, 13 Jan 2021 11:49:42 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -39,80 +39,78 @@ selenium-java (4.0.0-alpha-7)&lt;br /&gt;&lt;/p&gt;
 &lt;img src=&quot;/images/TECH3/1.png&quot; alt=&quot;그림1&quot; /&gt;
 위 그림1과 같이 다음 작업을 수행합니다.&lt;/p&gt;
 &lt;blockquote&gt;
-  &lt;ol&gt;
-    &lt;li&gt;프로젝트 관리자에서 src/main/kotlin 아래 package로 com이라는 하위 폴더를 생성하고
+  &lt;p&gt;프로젝트 관리자에서 src/main/kotlin 아래 package로 com이라는 하위 폴더를 생성하고
 src/main/kotlin/Crawler.kt를 com의 하위인 src/main/kotlin/com/Crawler.kt로 이동시킵니다.
-이때 발생하는 대화창에는 refactor를 선택합니다.&lt;/li&gt;
-  &lt;/ol&gt;
+이때 발생하는 대화창에는 refactor를 선택합니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h4 id=&quot;buildgradle-수정하기하고-빌드&quot;&gt;build.gradle 수정하기하고 빌드&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;/images/TECH3/3.png&quot; alt=&quot;그림3&quot; /&gt;
-‘'’kotlin
-buildscript {
-    ext.kotlin_version = ‘1.4.21’&lt;/p&gt;
+&lt;h4 id=&quot;buildgradle-수정하기하고-빌드하기&quot;&gt;build.gradle 수정하기하고 빌드하기&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/TECH3/2.png&quot; alt=&quot;그림2&quot; /&gt; 
+&lt;img src=&quot;/images/TECH3/3.png&quot; alt=&quot;그림3&quot; /&gt;&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;repositories {
-    mavenCentral()
-}
-dependencies {
-    classpath &quot;org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version&quot;
-} }
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;buildscript&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;ext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kotlin_version&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.4.21&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;
+
+    &lt;span class=&quot;nf&quot;&gt;repositories&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nf&quot;&gt;mavenCentral&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;dependencies&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;classpath&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version&quot;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;me&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;choiyoujun&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;version&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;SNAPSHOT&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;apply&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;application&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;apply&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;apply&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kotlin&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;sourceCompatibility&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.8&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;mainClassName&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;com.Crawler&quot;&lt;/span&gt;
+
+&lt;span class=&quot;nf&quot;&gt;dependencies&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;compile&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlin_version}&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;compile&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;group&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seleniumhq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;selenium&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;selenium-java&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;4.0.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;alpha-7&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nf&quot;&gt;repositories&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;mavenCentral&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nf&quot;&gt;test&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;useJUnit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nf&quot;&gt;compileKotlin&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;kotlinOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jvmTarget&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.8&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nf&quot;&gt;compileTestKotlin&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;kotlinOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jvmTarget&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.8&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nf&quot;&gt;jar&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;manifest&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;attributes&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Main-Class&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;CrawlerKt&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;configurations&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;compile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;collect&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;isDirectory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;zipTree&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nf&quot;&gt;sourceSets&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;srcDirs&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kotlin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;srcDirs&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kotlin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;group = ‘me.choiyoujun’
-version = ‘1.0-SNAPSHOT’&lt;/p&gt;
-
-&lt;p&gt;apply plugin: ‘application’
-apply plugin: ‘java’
-apply plugin: ‘kotlin’&lt;/p&gt;
-
-&lt;p&gt;sourceCompatibility = 1.8&lt;/p&gt;
-
-&lt;p&gt;mainClassName = “com.Crawler”&lt;/p&gt;
-
-&lt;p&gt;dependencies {
-    compile “org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlin_version}”
-    compile group: ‘org.seleniumhq.selenium’, name: ‘selenium-java’, version: ‘4.0.0-alpha-7’&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;repositories {
-    mavenCentral()
-}&lt;/p&gt;
-
-&lt;p&gt;test {
-    useJUnit()
-}&lt;/p&gt;
-
-&lt;p&gt;compileKotlin {
-    kotlinOptions.jvmTarget = ‘1.8’
-}&lt;/p&gt;
-
-&lt;p&gt;compileTestKotlin {
-    kotlinOptions.jvmTarget = ‘1.8’
-}&lt;/p&gt;
-
-&lt;p&gt;jar {
-    manifest {
-        attributes ‘Main-Class’: ‘com.CrawlerKt’
-    }
-    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
-}&lt;/p&gt;
-
-&lt;p&gt;sourceSets {
-    main.java.srcDirs += ‘src/main/kotlin/’
-    test.java.srcDirs += ‘src/test/kotlin/’
-}
-‘’’&lt;/p&gt;
 &lt;blockquote&gt;
-  &lt;ol&gt;
-    &lt;li&gt;프로젝트 관리자에서 build.gradle를 오픈합니다.&lt;br /&gt;
+  &lt;p&gt;프로젝트 관리자에서 build.gradle를 오픈합니다.&lt;br /&gt;
 build.gradle의 내용을 위와 같이 적절하게 수정합니다.&lt;br /&gt;
 빌드를 진행하기 전 Crawler.kt 소스코드를 먼저 확인해주세요.&lt;br /&gt;
 이 포스트에서 사용된 Crawler.kt의 버젼은 &lt;a href=&quot;/archivers/TECH2#crawlerkt-소스파일ver20210112&quot;&gt;ver.20210112-2&lt;/a&gt;입니다.&lt;br /&gt;
-그 후 우측 상단의 gradle 메뉴를 열어 tasks/build/build를 선택하여 gradle를 재빌드합니다.&lt;br /&gt;&lt;/li&gt;
-  &lt;/ol&gt;
+그 후 우측 상단의 gradle 메뉴를 열어 tasks/build/build를 선택하여 gradle를 재빌드합니다.&lt;br /&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h3 id=&quot;gradle로-빌드한-jar파일을-명령줄cli로-실행하기&quot;&gt;gradle로 빌드한 .jar파일을 명령줄(CLI)로 실행하기&lt;/h3&gt;
@@ -120,13 +118,15 @@ build.gradle의 내용을 위와 같이 적절하게 수정합니다.&lt;br /&gt
 프로젝트의 SeleniumCrawler/build/libs에 SeleniumCrawler-1.0-SNAPSHOT.jar라는 파일이 생성됩니다.&lt;br /&gt;
 이 파일(SeleniumCrawler-1.0-SNAPSHOT.jar)은 자바가상머신(JVM)으로 단독실행이 가능한 파일입니다.&lt;br /&gt;
 macOS의 기본 응용프로그램인 터미널(Terminal)를 열고 다음과 같은 명령어를 입력합니다.&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;java -jar /프로젝트 상위 경로/SeleniumCrawler/build/libs/SeleniumCrawler-1.0-SNAPSHOT.jar 문제번호 false&lt;br /&gt;
-예) java -jar /Users/사용자폴더/Documents/IdeaProjects/SeleniumCrawler/build/libs/SeleniumCrawler-1.0-SNAPSHOT.jar 17362 false &lt;br /&gt;
-&lt;img src=&quot;/images/TECH3/4.png&quot; alt=&quot;그림4&quot; /&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -jar /프로젝트 상위 경로/SeleniumCrawler/build/libs/SeleniumCrawler-1.0-SNAPSHOT.jar 문제번호 false
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;예) &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;java -jar /Users/사용자폴더/Documents/IdeaProjects/SeleniumCrawler/build/libs/SeleniumCrawler-1.0-SNAPSHOT.jar 17362 false&lt;/code&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/TECH3/4.png&quot; alt=&quot;그림4&quot; /&gt;
 명령줄로 실행한 파일이 성공적으로 작동했다면 위와 같은 화면이 나타납니다!&lt;br /&gt;
 이것으로 프로토타입의 크롤링 및 마크다운파일 자동생성기를 성공적으로 만들고 작동시켰습니다.&lt;br /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
 </description>
         <pubDate>Wed, 13 Jan 2021 00:00:00 +0900</pubDate>
         <link>http://localhost:4000/archivers/TECH3</link>
