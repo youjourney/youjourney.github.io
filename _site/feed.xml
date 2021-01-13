@@ -5,15 +5,15 @@
     <description>Developer blog</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 12 Jan 2021 13:20:37 +0900</pubDate>
-    <lastBuildDate>Tue, 12 Jan 2021 13:20:37 +0900</lastBuildDate>
+    <pubDate>Wed, 13 Jan 2021 10:25:18 +0900</pubDate>
+    <lastBuildDate>Wed, 13 Jan 2021 10:25:18 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
         <title>셀레니움 크롤러와 코틀린으로 만든 백준 문제풀이 마크다운 자동생성기</title>
         <description>&lt;h3 id=&quot;개요&quot;&gt;개요&lt;/h3&gt;
 
-&lt;p&gt;깃허브 블로그를 하면서, 마크다운을 일일이 작성하기가 번거롭고 귀찮아서 만들었습니다.&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;깃허브 블로그를 하면서 마크다운을 일일이 작성하기가 번거롭고 귀찮아서 만들었습니다.&lt;br /&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;1 문제를 확인한다.&lt;br /&gt;
@@ -32,18 +32,11 @@
 
 &lt;h1&gt;macOS 11.1 (Intel Mac) 기준&lt;/h1&gt;
 
-&lt;h4 id=&quot;사전-설치된-개발환경&quot;&gt;사전 설치된 개발환경&lt;/h4&gt;
-
 &lt;blockquote&gt;
   &lt;p&gt;인텔리제이(IntelliJ 2020.3)&lt;br /&gt;
 OpenJDK-15.0.1&lt;br /&gt;
-Microsoft Edge Browser(87.0.664.66)&lt;br /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h4 id=&quot;추가-설치될-개발환경&quot;&gt;추가 설치될 개발환경&lt;/h4&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Microsoft Edge WebDriver(87.0.664.66)&lt;br /&gt;
+Microsoft Edge Browser(87.0.664.66)&lt;br /&gt;
+Microsoft Edge WebDriver(87.0.664.66)&lt;br /&gt;
 selenium-java (4.0.0-alpha-7)&lt;br /&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -282,7 +275,7 @@ selenium-java (4.0.0-alpha-7)&lt;br /&gt;&lt;/p&gt;
             &lt;span class=&quot;n&quot;&gt;bw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
             &lt;span class=&quot;n&quot;&gt;fw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Exception&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Can't write the ${dateFormat.format(currentDateTime)}-${problem}.md&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Couldn't make the ${dateFormat.format(currentDateTime)}-${problem}.md successfully.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
             &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;printStackTrace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;finally&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
             &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fileName&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;is made successfully!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
