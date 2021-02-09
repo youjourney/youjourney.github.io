@@ -5,14 +5,15 @@
     <description>Developer blog</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 09 Feb 2021 13:55:20 +0900</pubDate>
-    <lastBuildDate>Tue, 09 Feb 2021 13:55:20 +0900</lastBuildDate>
+    <pubDate>Tue, 09 Feb 2021 14:04:23 +0900</pubDate>
+    <lastBuildDate>Tue, 09 Feb 2021 14:04:23 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
         <title>[백준] 암호제작 (1837)(kotlin)</title>
         <description>&lt;h3 id=&quot;문제-설명&quot;&gt;문제 설명&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/1837#description&quot; target=&quot;_blank&quot;&gt;백준 1837번 문제 링크&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/1837#description&quot; target=&quot;_blank&quot;&gt;백준 1837번 문제 링크&lt;/a&gt;
+&lt;a href=&quot;https://mapocodingpark.blogspot.com/2020/02/BOJ-1837.html&quot; target=&quot;_blank&quot;&gt;알고리즘 참고&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;입력-및-출력&quot;&gt;입력 및 출력&lt;/h3&gt;
 &lt;h4 id=&quot;-입력&quot;&gt;» 입력&lt;/h4&gt;
