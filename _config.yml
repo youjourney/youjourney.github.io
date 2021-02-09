@@ -12,13 +12,13 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "air" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "dark" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "ko-KR"
 title                    : "Youjourney Blog"
 title_separator          : "-"
-subtitle                 : "Let's do CODE" # site tagline that appears below site title in masthead
+subtitle                 : "Vires acquirit eundo" # site tagline that appears below site title in masthead
 name                     : "Youjourney"
 description              : "Developer blog"
 url                      : "https://youjourney.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -276,13 +276,13 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: false
+      author_profile: true
       read_time: false
       comments: # true
       share: true
       related: true
-      toc: false
-      toc_sticky: false
+      toc: true
+      toc_sticky: true
       search: true
   - scope:
       path: "_pages"
