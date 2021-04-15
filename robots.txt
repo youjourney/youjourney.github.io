@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /archivers/
 
-Sitemap: http://youjourney.github.io/sitemap.xml
+Sitemap: https://youjourney.github.io/sitemap.xml
