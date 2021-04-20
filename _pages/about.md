@@ -6,8 +6,8 @@ toc: true
 ---
 
 ### Education
-* Bachelor's Degree in Electronic Engineering<br/>from Incheon National University(2019, South Korea)<br/>
-* Majoring in Computer Science<br/>in Korea National Open University(2021 ~, South Korea)<br/>
+* Bachelor's Degree in Electronic Engineering(2019)<br/>
+* Majoring in Computer Science(2021~)<br/>
 
 
 ### References
