@@ -5,13 +5,13 @@
     <description>Developer blog</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 30 Apr 2021 09:50:29 +0900</pubDate>
-    <lastBuildDate>Fri, 30 Apr 2021 09:50:29 +0900</lastBuildDate>
+    <pubDate>Fri, 30 Apr 2021 09:57:01 +0900</pubDate>
+    <lastBuildDate>Fri, 30 Apr 2021 09:57:01 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
         <title>[프로그래머스] 2020 카카오 블라인드 채용 &gt; 신규 아이디 추천 (72410)(Kotlin)</title>
-        <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/72410?language=kotlin&quot;&gt;원본 문제&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+        <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/72410?language=kotlin&quot; target=&quot;_blank&quot;&gt;원본 문제&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;문제-설명&quot;&gt;문제 설명&lt;/h3&gt;
 
@@ -39,7 +39,7 @@
 
 &lt;hr /&gt;
 
-&lt;p&gt;예를 들어, new_id 값이 “…!@BaT#*..y.abcdefghijklm” 라면, 위 7단계를 거치고 나면 new_id는 아래와 같이 변경됩니다.&lt;/p&gt;
+&lt;p&gt;예를 들어, new_id 값이 “…!@BaT#*..y.abcdefghijklm” 라면, 위 7단계를 거치고 나면 new_id는 아래와 같이 변경됩니다.&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;1단계 대문자 ‘B’와 ‘T’가 소문자 ‘b’와 ‘t’로 바뀌었습니다.
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;...!@BaT#*..y.abcdefghijklm&quot;&lt;/code&gt; → &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;...!@bat#*..y.abcdefghijklm&quot;&lt;/code&gt;&lt;/p&gt;
@@ -62,9 +62,11 @@
 &lt;p&gt;7단계 아이디의 길이가 2자 이하가 아니므로 변화가 없습니다.
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;bat.y.abcdefghi&quot;&lt;/code&gt; → &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;bat.y.abcdefghi&quot;&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;따라서 신규 유저가 입력한 new_id가 “…!@BaT#*..y.abcdefghijklm”일 때, 네오의 프로그램이 추천하는 새로운 아이디는 “bat.y.abcdefghi” 입니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;신규 유저가 입력한 아이디를 나타내는 new_id가 매개변수로 주어질 때, “네오”가 설계한 7단계의 처리 과정을 거친 후의 추천 아이디를 return 하도록 solution 함수를 완성해 주세요.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;따라서 신규 유저가 입력한 new_id가 “…!@BaT#*..y.abcdefghijklm”일 때, 네오의 프로그램이 추천하는 새로운 아이디는 “bat.y.abcdefghi” 입니다.
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;strong&gt;신규 유저가 입력한 아이디를 나타내는 new_id가 매개변수로 주어질 때, “네오”가 설계한 7단계의 처리 과정을 거친 후의 추천 아이디를 return 하도록 solution 함수를 완성해 주세요.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;제한-사항&quot;&gt;제한 사항&lt;/h3&gt;
 
@@ -77,76 +79,76 @@ new_id에 나타날 수 있는 특수문자는 &lt;code class=&quot;language-pla
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th&gt;no&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;no&lt;/th&gt;
       &lt;th&gt;new_id&lt;/th&gt;
       &lt;th&gt;result&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;예1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;예1&lt;/td&gt;
       &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;...!@BaT#*..y.abcdefghijklm&quot;&lt;/code&gt;&lt;/td&gt;
       &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;bat.y.abcdefghi&quot;&lt;/code&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;예2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;예2&lt;/td&gt;
       &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;z-+.^.&quot;&lt;/code&gt;&lt;/td&gt;
       &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;z--&quot;&lt;/code&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;예3&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;예3&lt;/td&gt;
       &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;=.=&quot;&lt;/code&gt;&lt;/td&gt;
       &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;aaa&quot;&lt;/code&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;예4&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;예4&lt;/td&gt;
       &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;123_.def&quot;&lt;/code&gt;&lt;/td&gt;
       &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;123_.def&quot;&lt;/code&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;예5&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;예5&lt;/td&gt;
       &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;abcdefghijklmn.p&quot;&lt;/code&gt;&lt;/td&gt;
       &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;abcdefghijklmn&quot;&lt;/code&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;####입출력 예 #1
-문제의 예시와 같습니다.&lt;/p&gt;
+&lt;h4 id=&quot;입출력-예-1&quot;&gt;입출력 예 #1&lt;/h4&gt;
+&lt;p&gt;문제의 예시와 같습니다.&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;####입출력 예 #2
-7단계를 거치는 동안 new_id가 변화하는 과정은 아래와 같습니다.&lt;/p&gt;
+&lt;h4 id=&quot;입출력-예-2&quot;&gt;입출력 예 #2&lt;/h4&gt;
+&lt;p&gt;7단계를 거치는 동안 new_id가 변화하는 과정은 아래와 같습니다.&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;1단계 변화 없습니다.
-2단계 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;z-+.^.&quot;&lt;/code&gt; → &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;z-..&quot;&lt;/code&gt;
-3단계 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;z-..&quot;&lt;/code&gt; → &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;z-.&quot;&lt;/code&gt;
-4단계 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;z-.&quot;&lt;/code&gt; → &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;z-&quot;&lt;/code&gt;
-5단계 변화 없습니다.
-6단계 변화 없습니다.
-7단계 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;z-&quot;&lt;/code&gt; → &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;z--&quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;1단계 변화 없습니다.&lt;br /&gt;
+2단계 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;z-+.^.&quot;&lt;/code&gt; → &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;z-..&quot;&lt;/code&gt;&lt;br /&gt;
+3단계 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;z-..&quot;&lt;/code&gt; → &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;z-.&quot;&lt;/code&gt;&lt;br /&gt;
+4단계 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;z-.&quot;&lt;/code&gt; → &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;z-&quot;&lt;/code&gt;&lt;br /&gt;
+5단계 변화 없습니다.&lt;br /&gt;
+6단계 변화 없습니다.&lt;br /&gt;
+7단계 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;z-&quot;&lt;/code&gt; → &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;z--&quot;&lt;/code&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;####입출력 예 #3
-7단계를 거치는 동안 new_id가 변화하는 과정은 아래와 같습니다.&lt;/p&gt;
+&lt;h4 id=&quot;입출력-예-3&quot;&gt;입출력 예 #3&lt;/h4&gt;
+&lt;p&gt;7단계를 거치는 동안 new_id가 변화하는 과정은 아래와 같습니다.&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;1단계 변화 없습니다.
-2단계 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;=.=&quot;&lt;/code&gt; → &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;.&quot;&lt;/code&gt;
-3단계 변화 없습니다.
-4단계 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;.&quot;&lt;/code&gt; → &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;&quot;&lt;/code&gt; (new_id가 빈 문자열이 되었습니다.)
-5단계 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;&quot;&lt;/code&gt; → &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;a&quot;&lt;/code&gt;
-6단계 변화 없습니다.
-7단계 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;a&quot;&lt;/code&gt; → &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;aaa&quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;1단계 변화 없습니다.&lt;br /&gt;
+2단계 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;=.=&quot;&lt;/code&gt; → &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;.&quot;&lt;/code&gt;&lt;br /&gt;
+3단계 변화 없습니다.&lt;br /&gt;
+4단계 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;.&quot;&lt;/code&gt; → &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;&quot;&lt;/code&gt; (new_id가 빈 문자열이 되었습니다.)&lt;br /&gt;
+5단계 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;&quot;&lt;/code&gt; → &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;a&quot;&lt;/code&gt;&lt;br /&gt;
+6단계 변화 없습니다.&lt;br /&gt;
+7단계 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;a&quot;&lt;/code&gt; → &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;aaa&quot;&lt;/code&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;####입출력 예 #4
-1단계에서 7단계까지 거치는 동안 new_id(“123_.def”)는 변하지 않습니다. 즉, new_id가 처음부터 카카오의 아이디 규칙에 맞습니다.&lt;/p&gt;
+&lt;h4 id=&quot;입출력-예-4&quot;&gt;입출력 예 #4&lt;/h4&gt;
+&lt;p&gt;1단계에서 7단계까지 거치는 동안 new_id(“123_.def”)는 변하지 않습니다. 즉, new_id가 처음부터 카카오의 아이디 규칙에 맞습니다.&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;####입출력 예 #5
-1단계 변화 없습니다.
-2단계 변화 없습니다.
-3단계 변화 없습니다.
-4단계 변화 없습니다.
-5단계 변화 없습니다.
-6단계 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;abcdefghijklmn.p&quot;&lt;/code&gt; → &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;abcdefghijklmn.&quot;&lt;/code&gt; → &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;abcdefghijklmn&quot;&lt;/code&gt;
-7단계 변화 없습니다.&lt;/p&gt;
+&lt;h4 id=&quot;입출력-예-5&quot;&gt;입출력 예 #5&lt;/h4&gt;
+&lt;p&gt;1단계 변화 없습니다.&lt;br /&gt;
+2단계 변화 없습니다.&lt;br /&gt;
+3단계 변화 없습니다.&lt;br /&gt;
+4단계 변화 없습니다.&lt;br /&gt;
+5단계 변화 없습니다.&lt;br /&gt;
+6단계 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;abcdefghijklmn.p&quot;&lt;/code&gt; → &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;abcdefghijklmn.&quot;&lt;/code&gt; → &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;abcdefghijklmn&quot;&lt;/code&gt;&lt;br /&gt;
+7단계 변화 없습니다.&lt;br /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;문제-풀이1&quot;&gt;문제 풀이1&lt;/h3&gt;
 
@@ -227,6 +229,10 @@ new_id에 나타날 수 있는 특수문자는 &lt;code class=&quot;language-pla
         <pubDate>Fri, 30 Apr 2021 00:00:00 +0900</pubDate>
         <link>http://localhost:4000/archivers/PROGRAMMERS72410</link>
         <guid isPermaLink="true">http://localhost:4000/archivers/PROGRAMMERS72410</guid>
+        
+        <category>카카오,</category>
+        
+        <category>코딩테스트</category>
         
         
         <category>programmers</category>
@@ -373,6 +379,10 @@ new_id에 나타날 수 있는 특수문자는 &lt;code class=&quot;language-pla
         <pubDate>Fri, 30 Apr 2021 00:00:00 +0900</pubDate>
         <link>http://localhost:4000/archivers/PROGRAMMERS60059</link>
         <guid isPermaLink="true">http://localhost:4000/archivers/PROGRAMMERS60059</guid>
+        
+        <category>카카오,</category>
+        
+        <category>코딩테스트</category>
         
         
         <category>programmers</category>
