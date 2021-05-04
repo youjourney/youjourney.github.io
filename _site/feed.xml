@@ -5,9 +5,100 @@
     <description>Developer blog</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 30 Apr 2021 15:45:14 +0900</pubDate>
-    <lastBuildDate>Fri, 30 Apr 2021 15:45:14 +0900</lastBuildDate>
+    <pubDate>Tue, 04 May 2021 11:44:02 +0900</pubDate>
+    <lastBuildDate>Tue, 04 May 2021 11:44:02 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
+    
+      <item>
+        <title>사진(이미지)에 직접 위치기록(geotagging) 하기</title>
+        <description>&lt;h3 id=&quot;개요&quot;&gt;개요&lt;/h3&gt;
+
+&lt;p&gt;GPS가 내장되지 않은 디지털카메라에 지오태깅을 위한 보조수단으로 앱을 사용하여 위치를 삽입할 때, 실수로 GPS track log를 기록하지 않았을 경우를 GPS기록을 임의(직접)로 넣는 방법을 설명합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;시스템-환경&quot;&gt;시스템 환경&lt;/h3&gt;
+
+&lt;h1&gt;macOS 11.1 (Intel Mac) 기준&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;ExifTool(Ver. 12.25 for macOS)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;TextEditor(1 of Atom, VSCode, TextEditor, VI, Nano, ..)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;exiftool-참고-문서&quot;&gt;ExifTool 참고 문서&lt;/h3&gt;
+&lt;p&gt;
+ExifTool 다운로드는 [여기]( https://exiftool.org/ )&lt;br /&gt;
+ExifTool Geotag Document는 [여기]( https://exiftool.org/geotag.html )&lt;br /&gt;
+GPS 위도(latitude), 경도(longitude)는 [Google Map]( https://map.google.com/ )&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;geotagging지오태깅-하기&quot;&gt;Geotagging(지오태깅 하기)&lt;/h3&gt;
+
+&lt;h4 id=&quot;exiftool-설치&quot;&gt;ExifTool 설치&lt;/h4&gt;
+&lt;p&gt;ExifTool을 위 [다운로드]( /#ExifTool-참고-문서 )에서 다운 받아 설치합니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;gps-기록이-없는-사진-준비&quot;&gt;GPS 기록이 없는 사진 준비&lt;/h4&gt;
+
+&lt;p&gt;촬영한 사진이나 임의의 GPS 메타데이터가 없는 사진을 준비하고 사진의 타임스탬프를 확인합니다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2021-05-04-TECH1/seoul_cityhall.jpg&quot; alt=&quot;서울시청&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2021-05-04-TECH1/image1.png&quot; alt=&quot;서울시청_이미지_meta&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;gps-track-log-만들기&quot;&gt;GPS Track Log 만들기&lt;/h4&gt;
+
+&lt;p&gt;GPS TRACK LOG를 만들기 위해서는 사진의 타임스탬프, 해당 위치의 위도와 경도가 필요합니다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;타임스탬프는 사진 파일 정보를 통해 확인할 수 있으며, 기록하려는 곳(주소)의 위치는 Google Map을 통해 확인할 수 있습니다.&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2021-05-04-TECH1/image3.png&quot; alt=&quot;서울시청_위치_GMap&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;타임스탬프와 위치를 확인했다면,&lt;br /&gt;
+이제 GPS TRACK LOG를 임의로 생성해야 합니다.&lt;br /&gt;
+log는 메모장이나 텍스트에디터로 만들 수 있습니다. 텍스트에디터에서 빈 문서를 생성 후 아래 코드와 같이 기록한 뒤 &quot;gps.txt&quot;로 사진이 저장된 폴더에 함께 저장합니다.&lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;GPSDateTime,GPSLatitude,GPSLongitude
+2021:05:04 10:54:00,37.5662952,126.9757511
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2021-05-04-TECH1/image2.png&quot; alt=&quot;서울시청_위치_log_gps.txt&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;gps-track-log를-사진에-기록하기&quot;&gt;GPS Track Log를 사진에 기록하기&lt;/h4&gt;
+
+&lt;p&gt;터미널(Terminal) App을 실행한 뒤, 포커스를 사진과 gps.txt가 저장된 폴더로 이동시킵니다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;cd &lt;사진과 gps.txt기=&quot;&quot; 저장된=&quot;&quot; 폴더의=&quot;&quot; 경로=&quot;&quot;&gt;&lt;/사진과&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2021-05-04-TECH1/image4.png&quot; alt=&quot;terminal_포커스_이동&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;exiftool -기능 &quot;gps트랙파일&quot; &quot;사진파일&quot;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;exiftool -geotag gps.txt -geosync=+3600 ‘-geotime&amp;lt;${DateTimeOriginal}+00:00’ seoul_cityhall.jpg&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;참고-문헌&quot;&gt;참고 문헌&lt;/h3&gt;
+
+&lt;p&gt;서울 시청 이미지 &lt;a href=&quot;http://data.si.re.kr/collection/view/363&quot;&gt;여기&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 04 May 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/archivers/TECH1</link>
+        <guid isPermaLink="true">http://localhost:4000/archivers/TECH1</guid>
+        
+        <category>gps</category>
+        
+        <category>photography</category>
+        
+        <category>geotag</category>
+        
+        <category>image</category>
+        
+        <category>metadata</category>
+        
+        
+        <category>tech</category>
+        
+      </item>
     
       <item>
         <title>[프로그래머스] 2021 카카오 블라인드 채용 &gt; 메뉴 리뉴얼 (72411)(Kotlin)</title>
@@ -1160,78 +1251,6 @@ new_id에 나타날 수 있는 특수문자는 &lt;code class=&quot;language-pla
         <pubDate>Thu, 15 Apr 2021 00:00:00 +0900</pubDate>
         <link>http://localhost:4000/archivers/BOJ2512</link>
         <guid isPermaLink="true">http://localhost:4000/archivers/BOJ2512</guid>
-        
-        <category>algorithm</category>
-        
-        <category>kotlin</category>
-        
-        
-        <category>boj</category>
-        
-      </item>
-    
-      <item>
-        <title>[백준] 이친수 (2193)(kotlin)</title>
-        <description>&lt;h3 id=&quot;문제-설명&quot;&gt;문제 설명&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/2193#description&quot; target=&quot;_blank&quot;&gt;백준 2193번 문제 링크&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;입력-및-출력&quot;&gt;입력 및 출력&lt;/h3&gt;
-&lt;h4 id=&quot;-입력&quot;&gt;» 입력&lt;/h4&gt;
-&lt;p&gt;첫째 줄에 N이 주어진다.&lt;/p&gt;
-
-&lt;h4 id=&quot;-출력&quot;&gt;» 출력&lt;/h4&gt;
-&lt;p&gt;첫째 줄에 N자리 이친수의 개수를 출력한다.&lt;/p&gt;
-
-&lt;h3 id=&quot;예제-입출력테스트케이스&quot;&gt;예제 입출력(테스트케이스)&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;입력&lt;/th&gt;
-      &lt;th&gt;출력&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;3&lt;/td&gt;
-      &lt;td&gt;2&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;6&lt;/td&gt;
-      &lt;td&gt;8&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;문제-풀이1&quot;&gt;문제 풀이1&lt;/h3&gt;
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;`in`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;bufferedReader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;readLine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;toInt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;check&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;LongArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-    &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;dp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;check&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;check&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;LongArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Long&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;check&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0L&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;check&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;check&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;check&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;check&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;check&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;debug1&quot;&gt;Debug1&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/BOJ2193/Page1.png&quot; alt=&quot;debug1_image1&quot; /&gt;
-&lt;img src=&quot;/images/BOJ2193/Page2.png&quot; alt=&quot;debug1_image2&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Fri, 09 Apr 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/archivers/BOJ2193</link>
-        <guid isPermaLink="true">http://localhost:4000/archivers/BOJ2193</guid>
         
         <category>algorithm</category>
         
