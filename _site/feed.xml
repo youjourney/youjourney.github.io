@@ -5,8 +5,8 @@
     <description>Developer blog</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 12 May 2021 23:01:30 +0900</pubDate>
-    <lastBuildDate>Wed, 12 May 2021 23:01:30 +0900</lastBuildDate>
+    <pubDate>Wed, 12 May 2021 23:07:30 +0900</pubDate>
+    <lastBuildDate>Wed, 12 May 2021 23:07:30 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -52,7 +52,7 @@
   &lt;li&gt;인덱스(index)는 몇 번째 데이터인가 정도의 의미를 갖음&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;리스트의-장점&quot;&gt;리스트의 장점&lt;/h3&gt;
+&lt;h3 id=&quot;리스트-장점&quot;&gt;리스트 장점&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;포인터를 사용하여 다음 값의 위치를 가르키고 있으므로 삽입/삭제가 용이&lt;/li&gt;
@@ -62,7 +62,7 @@
   &lt;li&gt;불연속적 메모리공간을 점유하여 메모리 관리가 편리&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;리스트의-단점&quot;&gt;리스트의 단점&lt;/h3&gt;
+&lt;h3 id=&quot;리스트-단점&quot;&gt;리스트 단점&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;불연속적인 메모리공간을 사용하여 검색 성능이 좋지 않음&lt;/li&gt;
@@ -72,7 +72,7 @@
   &lt;li&gt;빈 요소(element: null)를 허용하지 않음&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;코틀린kotlin에서-배열arrays와-리스트arraylist&quot;&gt;코틀린(Kotlin)에서 배열(Arrays)와 리스트(ArrayList)&lt;/h1&gt;
+&lt;h1 id=&quot;코틀린kotlin에서-배열arrays와-리스트list&quot;&gt;코틀린(Kotlin)에서 배열(Arrays)와 리스트(List)&lt;/h1&gt;
 
 &lt;h2 id=&quot;코틀린kotlin-배열arrays&quot;&gt;코틀린(Kotlin) 배열(Arrays)&lt;/h2&gt;
 
@@ -103,11 +103,7 @@
 &lt;h3 id=&quot;코틀린-리스트-특징&quot;&gt;코틀린 리스트 특징&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;코틀린의 ArrayList는 자바의 ArrayList( java.util.ArrayList&amp;lt;E&amp;gt; )를 그대로 사용함.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;자바의 ArrayList는 최상위 클래스인 Object의 배열(Array)로 이루어져있음.&lt;/li&gt;
-  &lt;li&gt;ArrayList의 초기 생성시, 초기 생성값이 주어지지 않으면 기본값 사이즈 10으로 설정됨.&lt;/li&gt;
+  &lt;li&gt;코틀린의 List는 MutableList를 List 인터페이스에 업캐스팅하여 사용함.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;코틀린-배열과-리스트-차이점&quot;&gt;코틀린 배열과 리스트 차이점&lt;/h3&gt;
@@ -486,7 +482,7 @@
 
 &lt;h1 id=&quot;배열과-리스트의-성능-비교&quot;&gt;배열과 리스트의 성능 비교&lt;/h1&gt;
 
-&lt;p&gt;&lt;img src=&quot;/2021-05-12-ARRAYLIST/image1.png&quot; alt=&quot;배열과 리스트 성능 비교&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2021-05-12-ARRAYLIST/image1.png&quot; alt=&quot;배열과 리스트 성능 비교&quot; /&gt;&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -512,7 +508,7 @@
     &lt;p&gt;(환경에 따라 다름) 인덱스로 요소에 접근시 Array보다 List가 약 300배 느림&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Array가 ArrayList보다 약 40배 느린데, 이 것은 아직 이유를 찾지 못함
+    &lt;p&gt;Array가 ArrayList보다 약 40배 느린데, 이 것은 아직 이유를 찾지 못함.
 ArrayList가 java에서 내부적으로 Object[]으로 구현되어 있어서 그럴 것이라고 추측됨&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;

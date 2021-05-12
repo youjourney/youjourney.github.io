@@ -55,7 +55,7 @@ last_modified_at: 2021-05-12T22:59:00+0900
 
 
 
-### 리스트의 장점
+### 리스트 장점
 
 * 포인터를 사용하여 다음 값의 위치를 가르키고 있으므로 삽입/삭제가 용이
 * 동적타입으로 크기가 정해져있지 않음
@@ -65,7 +65,7 @@ last_modified_at: 2021-05-12T22:59:00+0900
 
 
 
-### 리스트의 단점
+### 리스트 단점
 
 * 불연속적인 메모리공간을 사용하여 검색 성능이 좋지 않음
 * 포인터를 통하여 다음 값을 가르키므로 배열 대비 추가적인 메모리 공간이 필요
@@ -76,7 +76,7 @@ last_modified_at: 2021-05-12T22:59:00+0900
 
 
 
-# 코틀린(Kotlin)에서 배열(Arrays)와 리스트(ArrayList)
+# 코틀린(Kotlin)에서 배열(Arrays)와 리스트(List)
 
 ## 코틀린(Kotlin) 배열(Arrays)
 
@@ -109,10 +109,7 @@ public class Array<T> {
 
 ### 코틀린 리스트 특징
 
-* 코틀린의 ArrayList는 자바의 ArrayList( java.util.ArrayList\<E> )를 그대로 사용함.
-
-* 자바의 ArrayList는 최상위 클래스인 Object의 배열(Array)로 이루어져있음.
-* ArrayList의 초기 생성시, 초기 생성값이 주어지지 않으면 기본값 사이즈 10으로 설정됨.
+* 코틀린의 List는 MutableList를 List 인터페이스에 업캐스팅하여 사용함.
 
 
 
@@ -471,7 +468,7 @@ public class ArrayList<E> extends AbstractList<E> implements List<E>, RandomAcce
 
 # 배열과 리스트의 성능 비교
 
-![배열과 리스트 성능 비교]( {{site.baseurl}}/2021-05-12-ARRAYLIST/image1.png )
+![배열과 리스트 성능 비교]( {{site.baseurl}}/images/2021-05-12-ARRAYLIST/image1.png )
 
 |    Array    |    List    | ArrayList  | MutableList |
 | :---------: | :--------: | :--------: | :---------: |
@@ -479,5 +476,5 @@ public class ArrayList<E> extends AbstractList<E> implements List<E>, RandomAcce
 
 * (환경에 따라 다름) 인덱스로 요소에 접근시 Array보다 List가 약 300배 느림
 
-* Array가 ArrayList보다 약 40배 느린데, 이 것은 아직 이유를 찾지 못함
+* Array가 ArrayList보다 약 40배 느린데, 이 것은 아직 이유를 찾지 못함.
   ArrayList가 java에서 내부적으로 Object[]으로 구현되어 있어서 그럴 것이라고 추측됨
