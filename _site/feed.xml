@@ -5,9 +5,171 @@
     <description>Developer blog</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 12 May 2021 23:07:30 +0900</pubDate>
-    <lastBuildDate>Wed, 12 May 2021 23:07:30 +0900</lastBuildDate>
+    <pubDate>Fri, 14 May 2021 18:13:58 +0900</pubDate>
+    <lastBuildDate>Fri, 14 May 2021 18:13:58 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
+    
+      <item>
+        <title>2021 카카오 채용연계형 인턴십 코딩테스트 후기(Programming 분야)</title>
+        <description>&lt;h2 id=&quot;2021-카카오-채용연계형-인턴십-코딩테스트-후기programming-분야&quot;&gt;2021 카카오 채용연계형 인턴십 코딩테스트 후기(Programming 분야)&lt;/h2&gt;
+
+&lt;h3 id=&quot;전형-방법-및-일정&quot;&gt;전형 방법 및 일정&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;지원기간 : 2021.04.15(목) ~ 2021.05.03(월) 17:00&lt;/li&gt;
+  &lt;li&gt;코딩 테스트 : 2021.05.08(토)  14:00 ~ 18:00 (4시간)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;지원-분야-및-언어&quot;&gt;지원 분야 및 언어&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;지원 분야 : Programming&lt;/li&gt;
+  &lt;li&gt;코딩 테스트 언어 : Kotlin&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;코딩-테스트-난이도주관적&quot;&gt;코딩 테스트 난이도(주관적)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;공채 블라인드 테스트가 &lt;strong&gt;TOP&lt;/strong&gt;였다면, 인턴 코딩 테스트는 &lt;strong&gt;맥심커피믹스&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;공채 블라인드 테스트는 6시간 동안 7문제&lt;/li&gt;
+  &lt;li&gt;인턴 코딩 테스트는 4시간 동안 5문제&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;개인적 느낌으로 공채 블라인드 코딩테스트는 코테에서 일반적인 알고리즘을 얼마나 적절하게 잘 활용하는지 테스트 하는 느낌이었습니다.&lt;/p&gt;
+
+&lt;p&gt;문제도 장황한 편이고 그 장황한 문제속에서 코딩의 제약사항을 잘 캐치해서 빠르게 풀어야 하는데,&lt;/p&gt;
+
+&lt;p&gt;분명 기존 알고리즘으로 풀 수 있지만, 풀다보면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;아하, 이 알고리즘을 이렇게 쓸 수도 있겠구나&lt;/code&gt; 싶은 난이도로 나옵니다. (언제나 그렇듯 절대 내가 예상한 로또번호는 당첨되지 않..)&lt;/p&gt;
+
+&lt;p&gt;문제를 많이 비틀어 출제합니다.&lt;/p&gt;
+
+&lt;p&gt;사실 많이 비튼것까진 아니지만,&lt;/p&gt;
+
+&lt;p&gt;문제에 어떤 조건이 추가되냐에 따라 적용할 수 있는 알고리즘과 구현이 완전 달라지기도 합니다.&lt;/p&gt;
+
+&lt;p&gt;반면에 인턴 코딩테스트는 기본적인 알고리즘과 사용한 알고리즘에 대해 얼마나 잘 파악하고 있는지,&lt;/p&gt;
+
+&lt;p&gt;살짝 비튼 문제로 출제하는 것 같습니다.&lt;/p&gt;
+
+&lt;p&gt;공채에 비하면 알고리즘에 충실한 편으로 많이 순한맛입니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;코딩-테스트-문제들-5문제&quot;&gt;코딩 테스트 문제들 (5문제)&lt;/h3&gt;
+
+&lt;h4 id=&quot;1번째-문제-구현-난이도--별1&quot;&gt;1번째 문제 (구현, 난이도 : 별1)&lt;/h4&gt;
+
+&lt;p&gt;사실 이 문제를 풀고서도 많은 고민이 있었습니다.&lt;/p&gt;
+
+&lt;p&gt;이거 함정이 아닐까 싶을정도로 당황스럽게 쉬운편이었습니다.&lt;/p&gt;
+
+&lt;p&gt;대학에 들어와 C프로그래밍을 처음 공부하다보면,&lt;/p&gt;
+
+&lt;p&gt;교수님들이 많이 과제로 내주신다는&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;별 그림을 콘솔로그에 출력하기(aka 별찍기)&lt;/code&gt; 와 유사한 느낌이었습니다.&lt;/p&gt;
+
+&lt;p&gt;조금 더 개발자 스럽게 풀어보기 위해서 생각을 하던중&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;내가 지금 이런 문제로 고민하면서 시간을 보낼때가 아니라 한 문제라도 더 풀어야한다&lt;/code&gt; 는 것을 깨닫고&lt;/p&gt;
+
+&lt;p&gt;그냥 쉽게 풀어넘겼습니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;2번째-문제-탐색-난이도--별3&quot;&gt;2번째 문제 (탐색, 난이도 : 별3)&lt;/h4&gt;
+
+&lt;p&gt;카카오는 이런 문제를 항상 선호하는 것 같습니다.&lt;/p&gt;
+
+&lt;p&gt;길찾기와 비슷한 문제였습니다.&lt;/p&gt;
+
+&lt;p&gt;처음에 DFS로 구현하려다 무한 루프에 빠질것 같아 BFS로 바꾸고,&lt;/p&gt;
+
+&lt;p&gt;갈 수 있는 방향이 정해져있다는 것과 그래프 탐색에서&lt;/p&gt;
+
+&lt;p&gt;해당 위치에서 존재하지 말아야할 값이 있는지를 차근 차근 탐색하는 방식으로 풀었습니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;3번째-문제-구현-난이도--별3&quot;&gt;3번째 문제 (구현, 난이도 : 별3)&lt;/h4&gt;
+
+&lt;p&gt;리스트에서 값을 추가하고 삭제하는 과정으로,&lt;/p&gt;
+
+&lt;p&gt;원본 결과물과 최종 결과물을 비교해서 원본과 같은 위치에 같은 값이 있으면 O,&lt;/p&gt;
+
+&lt;p&gt;아니면(삭제되었다면) X를 출력하는 문제였습니다.&lt;/p&gt;
+
+&lt;p&gt;구현하는게 생각보다 까다로웠고, &lt;strong&gt;효율성&lt;/strong&gt; 테스트가 존재하는 문제였습니다.&lt;/p&gt;
+
+&lt;p&gt;정확성 테스트는 모두 통과했지만, 효율성은 10개중 7개만 맞췄습니다.&lt;/p&gt;
+
+&lt;p&gt;StringBuffer와 StringBuilder가 효율성테스트 맞춘 갯수가 차이가 있었습니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;4번째-문제-최단-거리-난이도--별3&quot;&gt;4번째 문제 (최단 거리, 난이도 : 별3)&lt;/h4&gt;
+
+&lt;p&gt;가장 기본적인 한 정점으로부터 다른 정점으로까지 최단거리를 구하는 것이었지만,&lt;/p&gt;
+
+&lt;p&gt;정점과 정점은 방향성과 가중치가 있으며&lt;/p&gt;
+
+&lt;p&gt;일부 정점은 그 정점과 연결된 간선의 방향을 모두 반대로 바꾸는 함정이 있습니다.&lt;/p&gt;
+
+&lt;p&gt;카카오스럽게 기본 다익스트라로 풀면 안풀리는 문제를 내놨습니다.&lt;/p&gt;
+
+&lt;p&gt;(물론 다익스트라로 접근해야할 것 같았습니다.)&lt;/p&gt;
+
+&lt;p&gt;시간이 부족하여, 교과서적인 다익스트라 알고리즘에 함정에 대한 함수만 약간 추가했습니다.&lt;/p&gt;
+
+&lt;p&gt;채점전, 기본 테스트케이스 2개중 1개만 맞았고 채점을 돌리니 7/10정도 맞았습니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;5번째-문제-이진-트리-난이도--별4-예상&quot;&gt;5번째 문제 (이진 트리, 난이도 : 별4 예상?)&lt;/h4&gt;
+
+&lt;p&gt;손도 못댔습니다.&lt;/p&gt;
+
+&lt;p&gt;다익스트라, 플로이드 와샬, DFS, BFS, 그래프 탐색은 다 해봤지만&lt;/p&gt;
+
+&lt;p&gt;완전 이진트리를 분할 정복하는 방법이 떠오르지 않았고 시간도 없어서 풀지 못했습니다.&lt;/p&gt;
+
+&lt;p&gt;문제 자체는 비슷한 류의 문제를 풀어본 적이 있다면 생각보다 쉽게 풀렸을 문제라 보였습니다.&lt;/p&gt;
+
+&lt;p&gt;저는 풀어보지 못한 문제라 별4개짜리 문제라 생각합니다.&lt;/p&gt;
+
+&lt;p&gt;제가 생각하는 가장 어려운 별 5개짜리 문제는&lt;/p&gt;
+
+&lt;p&gt;수학과 DP가 적절히 조합된 문제라고 생각합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;코딩테스트-유의사항&quot;&gt;코딩테스트 유의사항&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;원칙적으로 정확성과 효율성 모두 통과하지 못한 문제는 맞추지 틀린 문제로 간주
+(부분 점수 X)&lt;/li&gt;
+  &lt;li&gt;동점자가 발생했을 경우 부분 점수 부여&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;이번 코딩테스트에서 4/5개를 풀었고, 원칙적으로 2/5개를 맞았습니다.&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;코딩-테스트-결과-514&quot;&gt;코딩 테스트 결과 (5/14)&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2021-05-14/KAKAOINTERNSHIP/pass.png&quot; alt=&quot;첫 관문 통과&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;저도 이런 테스트의 문턱을 넘어보는 날이 오네요.. 감동..&lt;/strong&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 14 May 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/archivers/KAKAOINTERNSHIP</link>
+        <guid isPermaLink="true">http://localhost:4000/archivers/KAKAOINTERNSHIP</guid>
+        
+        <category>kakao</category>
+        
+        <category>algorithm</category>
+        
+        <category>test</category>
+        
+        <category>internship</category>
+        
+        <category>kotlin</category>
+        
+        
+        <category>KAKAO</category>
+        
+        <category>TEST</category>
+        
+      </item>
     
       <item>
         <title>코틀린(Kotlin)에서 배열(Array)과 리스트(List)의 비교</title>
@@ -2207,120 +2369,6 @@ new_id에 나타날 수 있는 특수문자는 &lt;code class=&quot;language-pla
         <pubDate>Tue, 20 Apr 2021 00:00:00 +0900</pubDate>
         <link>http://localhost:4000/archivers/BOJ1182</link>
         <guid isPermaLink="true">http://localhost:4000/archivers/BOJ1182</guid>
-        
-        <category>algorithm</category>
-        
-        <category>kotlin</category>
-        
-        
-        <category>boj</category>
-        
-      </item>
-    
-      <item>
-        <title>[백준] 한 줄로 서기 (1138)(kotlin)</title>
-        <description>&lt;h3 id=&quot;문제-설명&quot;&gt;문제 설명&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/1138#description&quot; target=&quot;_blank&quot;&gt;백준 1138번 문제 링크&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;입력-및-출력&quot;&gt;입력 및 출력&lt;/h3&gt;
-&lt;h4 id=&quot;-입력&quot;&gt;» 입력&lt;/h4&gt;
-&lt;p&gt;첫째 줄에 사람의 수 N이 주어진다. N은 10보다 작거나 같은 자연수이다. 둘째 줄에는 키가 1인 사람부터 차례대로 자기보다 키가 큰 사람이 왼쪽에 몇 명이 있었는지 주어진다. i번째 수는 0보다 크거나 같고, N-i보다 작거나 같다.&lt;/p&gt;
-
-&lt;h4 id=&quot;-출력&quot;&gt;» 출력&lt;/h4&gt;
-&lt;p&gt;첫째 줄에 줄을 선 순서대로 키를 출력한다.&lt;/p&gt;
-
-&lt;h3 id=&quot;예제-입출력테스트케이스&quot;&gt;예제 입출력(테스트케이스)&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;입력&lt;/th&gt;
-      &lt;th&gt;출력&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;4&lt;br /&gt;2 1 1 0&lt;/td&gt;
-      &lt;td&gt;4 2 1 3&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;5&lt;br /&gt;2 1 0 1 0&lt;/td&gt;
-      &lt;td&gt;3 2 1 5 4&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;문제-풀이1&quot;&gt;문제 풀이1&lt;/h3&gt;
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.PriorityQueue&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;ahead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Comparable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;compareTo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;other&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ahead&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;other&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ahead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;other&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;height&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;height&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ahead&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;other&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ahead&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;`in`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;bufferedReader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;readLine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;toInt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;IntArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;q&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;PriorityQueue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;()&lt;/span&gt;
-
-    &lt;span class=&quot;nf&quot;&gt;readLine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;toInt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;forEachIndexed&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ahead&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ahead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;max&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;poll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ahead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;height&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;isNotEmpty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;current&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;poll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;move&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;current&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;height&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;until&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;move&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-                &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;jdx&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;until&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;current&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ahead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                        &lt;span class=&quot;n&quot;&gt;jdx&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;
-                        &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
-                    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-                    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;move&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;++&lt;/span&gt;
-                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-                &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jdx&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;until&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                        &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;move&lt;/span&gt;
-                        &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
-                    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-                    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                        &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;temp&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-                        &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;move&lt;/span&gt;
-                        &lt;span class=&quot;n&quot;&gt;move&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;
-                    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;joinToString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;debug1&quot;&gt;Debug1&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/BOJ1138/Page1.png&quot; alt=&quot;debug1_image1&quot; /&gt;
-&lt;img src=&quot;/images/BOJ1138/Page2.png&quot; alt=&quot;debug1_image2&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 20 Apr 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/archivers/BOJ1138</link>
-        <guid isPermaLink="true">http://localhost:4000/archivers/BOJ1138</guid>
         
         <category>algorithm</category>
         
