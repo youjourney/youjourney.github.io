@@ -10,6 +10,7 @@
 -->
 <html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
   <head>
+    <meta name="naver-site-verification" content="a026077b2182d0853e19ad3e6aee0f4ce6e6038b" />
     <meta  property="fb:app_id"  content="325605718962256"  />
     <meta  property="fb:admins"  content="325605718962256"/>
     <meta  property="og:url"  content="URL"  />
@@ -20,7 +21,7 @@
     {% include head.html %}
     {% include head/custom.html %}
   </head>
-
+  
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
     {% include_cached skip-links.html %}
     {% include_cached browser-upgrade.html %}
