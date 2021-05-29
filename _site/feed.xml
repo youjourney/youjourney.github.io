@@ -5,8 +5,8 @@
     <description>Developer blog</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 27 May 2021 12:36:59 +0900</pubDate>
-    <lastBuildDate>Thu, 27 May 2021 12:36:59 +0900</lastBuildDate>
+    <pubDate>Thu, 27 May 2021 12:37:52 +0900</pubDate>
+    <lastBuildDate>Thu, 27 May 2021 12:37:52 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -93,8 +93,7 @@
 흔하디 흔한 영어성적 하나도, 컴퓨터 관련 자격증이나 대회 수상 경력도 없어 걱정도 무척 많았습니다. 이러한 부족한 스펙을 만회하기 위해서 자소서에서 학부 팀프로젝트와 개인 토이프로젝트를 하면서 어떠한 기술들(여러 언어와 기술들의 깊지는 않지만 다양한 활용)을 사용해 보았으며, 또 부가적으로 기초적인 공부를 복습하면서 발견한 특이점(일반적 상식과 동작이 다른 부분) 분석에 대한 내용을 담으며 차별화를 시도했습니다.&lt;br /&gt;
 &lt;br /&gt;
 블라인드 채용으로 유명한 카카오 전형의 관문을 이제 막 다 넘어고,
-1차 인터뷰라는 관건이 남았습니다.&lt;br /&gt;
-머리를 싸매며 코테를 준비하는 분들도, 떨리는 마음으로 면접을 준비하는 분들도 모두 화이팅합시다!&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+1차 인터뷰라는 관건이 남았습니다. &lt;strong&gt;머리를 싸매며 코테를 준비하는 분들도, 떨리는 마음으로 면접을 준비하는 분들도 모두 화이팅합시다!&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 27 May 2021 00:00:00 +0900</pubDate>
         <link>http://localhost:4000/archivers/2021KAKAOINTERNSHIP_2PHASE</link>
