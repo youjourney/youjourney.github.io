@@ -5,8 +5,8 @@
     <description>Developer blog</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 24 Sep 2022 12:07:21 +0900</pubDate>
-    <lastBuildDate>Sat, 24 Sep 2022 12:07:21 +0900</lastBuildDate>
+    <pubDate>Wed, 25 Jan 2023 12:06:59 +0900</pubDate>
+    <lastBuildDate>Wed, 25 Jan 2023 12:06:59 +0900</lastBuildDate>
     <generator>Jekyll v3.9.2</generator>
     
       <item>
@@ -230,49 +230,167 @@
 &lt;p&gt;&lt;strong&gt;입출력 예 #2&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;요금표
-|기본 시간(분)|	기본 요금(원)|	단위 시간(분)|	단위 요금(원)|
-|—|—|—|—|
-|120|	0|	60|	591|&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;입/출차 기록
-|시각(시:분)|	차량 번호|	내역|
-|—|—|—|
-|16:00|	3961|	입차|
-|16:00|	0202|	입차|
-|18:00|	3961|	출차|
-|18:00|	0202|	출차|
-|23:58|	3961|	입차|&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;자동차별 주차 요금
-|차량 번호|	누적 주차 시간(분)|	주차 요금(원)|
-|—|—|—|
-|0202|	120|	0|
-|3961|	120 + 1 = 121|	0 +⌈(121 - 120) / 60⌉x 591 = 591|&lt;/li&gt;
+  &lt;li&gt;요금표&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;기본 시간(분)&lt;/th&gt;
+      &lt;th&gt;기본 요금(원)&lt;/th&gt;
+      &lt;th&gt;단위 시간(분)&lt;/th&gt;
+      &lt;th&gt;단위 요금(원)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;120&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;60&lt;/td&gt;
+      &lt;td&gt;591&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;입/출차 기록&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;시각(시:분)&lt;/th&gt;
+      &lt;th&gt;차량 번호&lt;/th&gt;
+      &lt;th&gt;내역&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;16:00&lt;/td&gt;
+      &lt;td&gt;3961&lt;/td&gt;
+      &lt;td&gt;입차&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;16:00&lt;/td&gt;
+      &lt;td&gt;0202&lt;/td&gt;
+      &lt;td&gt;입차&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;18:00&lt;/td&gt;
+      &lt;td&gt;3961&lt;/td&gt;
+      &lt;td&gt;출차&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;18:00&lt;/td&gt;
+      &lt;td&gt;0202&lt;/td&gt;
+      &lt;td&gt;출차&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;23:58&lt;/td&gt;
+      &lt;td&gt;3961&lt;/td&gt;
+      &lt;td&gt;입차&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;자동차별 주차 요금&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;차량 번호&lt;/th&gt;
+      &lt;th&gt;누적 주차 시간(분)&lt;/th&gt;
+      &lt;th&gt;주차 요금(원)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0202&lt;/td&gt;
+      &lt;td&gt;120&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3961&lt;/td&gt;
+      &lt;td&gt;120 + 1 = 121&lt;/td&gt;
+      &lt;td&gt;0 +⌈(121 - 120) / 60⌉x 591 = 591&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
   &lt;li&gt;3961번 차량은 2번째 입차된 후에는 출차된 내역이 없으므로, 23:59에 출차되었다고 간주합니다.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;입출력 예 #2&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;요금표
-|기본 시간(분)|	기본 요금(원)|	단위 시간(분)|	단위 요금(원)|
-|—|—|—|—|
-|1|	461|	1|	10|&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;입/출차 기록
-|시각(시:분)|	차량 번호|	내역|
-|—|—|—|
-|00:00|	1234|	입차|&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;자동차별 주차 요금
-|차량 번호|	누적 주차 시간(분)|	주차 요금(원)|
-|—-|—-|—-|
-|1234|	1439|	461 +⌈(1439 - 1) / 1⌉x 10 = 14841|&lt;/li&gt;
+  &lt;li&gt;요금표&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;기본 시간(분)&lt;/th&gt;
+      &lt;th&gt;기본 요금(원)&lt;/th&gt;
+      &lt;th&gt;단위 시간(분)&lt;/th&gt;
+      &lt;th&gt;단위 요금(원)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;461&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;입/출차 기록&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;시각(시:분)&lt;/th&gt;
+      &lt;th&gt;차량 번호&lt;/th&gt;
+      &lt;th&gt;내역&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;00:00&lt;/td&gt;
+      &lt;td&gt;1234&lt;/td&gt;
+      &lt;td&gt;입차&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;자동차별 주차 요금&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;차량 번호&lt;/th&gt;
+      &lt;th&gt;누적 주차 시간(분)&lt;/th&gt;
+      &lt;th&gt;주차 요금(원)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1234&lt;/td&gt;
+      &lt;td&gt;1439&lt;/td&gt;
+      &lt;td&gt;461 +⌈(1439 - 1) / 1⌉x 10 = 14841&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
   &lt;li&gt;1234번 차량은 출차 내역이 없으므로, 23:59에 출차되었다고 간주합니다.&lt;/li&gt;
 &lt;/ul&gt;
 
