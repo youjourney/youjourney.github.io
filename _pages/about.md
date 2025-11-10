@@ -5,11 +5,6 @@ last_modified_at: 2021-04-15T15:20:00+09:00
 toc: true
 ---
 
-### Education
-* Bachelor's Degree in Electronic Engineering(2019)<br/>
-* Majoring in Computer Science(2021~)<br/>
-
-
 ### References
 * [GitHub](https://github.com/youjourney){:target="_blank"}
 <br/>
