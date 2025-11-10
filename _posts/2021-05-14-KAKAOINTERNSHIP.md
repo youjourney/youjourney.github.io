@@ -2,18 +2,15 @@
 title: "2021 카카오 채용연계형 인턴십 코딩테스트 후기(Programming 분야)"
 excerpt: "카카오 인턴십까지의 첫 관문, 코딩 테스트!"
 categories:
-- KAKAO
-- TEST
+  - Career
 tags:
-- kakao
-- algorithm
-- test
-- internship
-- kotlin
+  - Algorithm
+  - Internship
+  - Kakao
+  - Kotlin
+  - test
 last_modified_at: 2021-05-14T18:00:00+0900
 ---
-
-
 ## 2021 카카오 채용연계형 인턴십 코딩테스트 후기(Programming 분야)
 
 

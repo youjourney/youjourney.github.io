@@ -2,21 +2,16 @@
 title: "2021 카카오 채용연계형 인턴십 코딩테스트 서류전형 후기(Tech/iOS Programming 분야)"
 excerpt: "카카오 인턴십까지의 두번째 관문, 서류 전형!"
 categories:
-- kakao
-- dev
-- codingtest
-- resume
+  - Career
 tags:
-- kakao
-- ios
-- codingtest
-- internship
-- kotlin
-- resume
+  - Coding Test
+  - Internship
+  - Kakao
+  - Kotlin
+  - Resume
+  - iOS
 last_modified_at: 2021-05-27T13:00:00+0900
 ---
-
-
 ## 2021 카카오 채용연계형 인턴십 서류전형 후기(Tech Developers)
 
 ### 전형 방법 및 일정

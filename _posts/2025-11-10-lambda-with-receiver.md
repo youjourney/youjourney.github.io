@@ -2,18 +2,17 @@
 title: "Understanding Lambdas with Receiver in Kotlin"
 excerpt: "A clear explanation of Kotlin's 'lambda with receiver' syntax, how it differs from normal lambdas, and why it's powerful in DSLs and Compose."
 categories:
-  - Kotlin
+  - Development
+tags:
   - Android
   - Compose
-tags:
-  - lambda
-  - receiver
   - DSL
+  - Jetpack Compose
   - Kotlin
-  - Compose
+  - Lambda
+  - Receiver
 last_modified_at: 2025-11-10T00:00:00+0900
 ---
-
 ## 📘 Introduction
 
 Kotlin’s **lambda with receiver** is one of its most elegant and powerful language features. It allows a lambda function to behave as if it were an extension function — meaning you can access the receiver object’s members directly, without referring to it explicitly.

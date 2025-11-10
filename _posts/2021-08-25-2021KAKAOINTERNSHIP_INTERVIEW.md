@@ -2,21 +2,16 @@
 title: "2021 카카오 채용연계형 인턴십 코딩테스트 면접 후기(Tech/iOS Programming 분야)"
 excerpt: "카카오 인턴십까지의 마지막 관문, 인터뷰!"
 categories:
-- kakao
-- dev
-- codingtest
-- resume
+  - Career
 tags:
-- kakao
-- ios
-- codingtest
-- internship
-- kotlin
-- resume
+  - Coding Test
+  - Internship
+  - Kakao
+  - Kotlin
+  - Resume
+  - iOS
 last_modified_at: 2021-08-25T15:00:00+0900
 ---
-
-
 ## 2021 카카오 채용연계형 인턴십 면접 후기(Tech Developers)
 
 [서류 전형 후기]( {{ site.baseurl}}archivers/2021KAKAOINTERNSHIP_2PHASE )

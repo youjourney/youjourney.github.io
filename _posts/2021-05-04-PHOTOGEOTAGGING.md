@@ -2,13 +2,13 @@
 title: "사진(이미지)에 직접 위치기록(geotagging) 하기"
 excerpt: "사진(jpg, dng, raw...)에 GPS 정보를 입력하는 방법"
 categories:
-- tech
+  - Development
 tags:
-- gps
-- photography
-- geotag
-- image
-- metadata
+  - GPS
+  - GeoTag
+  - Image
+  - Metadata
+  - Photography
 last_modified_at: 2021-05-04T12:00:00+0900
 ---
 ### 개요

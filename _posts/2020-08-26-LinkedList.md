@@ -2,11 +2,11 @@
 title: "[자료구조] LinkedList 구현하기 (Kotlin)"
 excerpt: 
 categories:
-- studies
+  - Computer Science
 tags:
+  - Kotlin
 last_modified_at: 2020-08-26T16:00:00+0900
 ---
-
 ### 링크드 리스트(Linked List)
 
 **[소스 참고](https://nanamare.tistory.com/117)

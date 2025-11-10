@@ -2,16 +2,16 @@
 title: "코틀린(Kotlin)에서 배열(Array)과 리스트(List)의 비교"
 excerpt: "코틀린에서 배열과 리스트의 장단점과 성능을 확인"
 categories:
-- CS
+  - Computer Science
 tags:
-- datastructure
-- arrays
-- list
-- arraylist
-- mutablelist
+  - ArrayList
+  - Arrays
+  - Data Structure
+  - Kotlin
+  - List
+  - MutableList
 last_modified_at: 2021-05-12T22:59:00+0900
 ---
-
 # 배열(Arrays)와 리스트(List)의 차이
 
 ## 배열(Arrays)

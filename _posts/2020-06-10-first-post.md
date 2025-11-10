@@ -2,11 +2,10 @@
 title: "My first posting"
 excerpt: ABCDEFGHIJKLMNOPQRSTUVWXYZ
 categories:
-- blog
+  - Blog
 tags:
 last_modified_at: 2020-06-10T12:00:00+09:00
 ---
-
 ## 첫 포스트 ##
 ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
