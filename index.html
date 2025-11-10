@@ -1,25 +1,37 @@
 ---
-layout: none
-sitemap: false
+layout: default
+author_profile: true
 ---
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Redirecting…</title>
-{% if site.posts and site.posts.size > 0 %}
-<meta http-equiv="refresh" content="0; url={{ site.posts.first.url | relative_url }}">
-<link rel="canonical" href="{{ site.posts.first.url | relative_url }}">
-{% endif %}
-</head>
-<body>
-{% if site.posts and site.posts.size > 0 %}
-<p>Redirecting to the latest post… <a href="{{ site.posts.first.url | relative_url }}">Click here if you are not redirected.</a></p>
-{% else %}
-<p>No posts found.</p>
-{% endif %}
-</body>
-</html>
+{% assign latest = site.posts | first %}
+<div id="main" role="main">
+  {% include sidebar.html %}
+  {% if latest %}
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="{{ latest.title | markdownify | strip_html | strip_newlines | escape_once }}">
+    <meta itemprop="datePublished" content="{{ latest.date | date_to_xmlschema }}">
+    {% if latest.last_modified_at %}<meta itemprop="dateModified" content="{{ latest.last_modified_at | date_to_xmlschema }}">{% endif %}
+    <div class="page__inner-wrap">
+      <header>
+        <h1 id="page-title" class="page__title" itemprop="headline">
+          <a href="{{ latest.url | relative_url }}">{{ latest.title }}</a>
+        </h1>
+        <p class="page__meta">
+          <span class="page__meta-date">
+            <time datetime="{{ latest.date | date_to_xmlschema }}">
+              {{ latest.date | date: site.minimal_mistakes.date_format | default: "%B %d, %Y" }}
+            </time>
+          </span>
+        </p>
+      </header>
+      <section class="page__content" itemprop="text">
+        {{ latest.content }}
+      </section>
+    </div>
+  </article>
+  {% else %}
+  <p>No posts found.</p>
+  {% endif %}
+</div>
 ---
 layout: default
 author_profile: true
