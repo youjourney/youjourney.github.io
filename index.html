@@ -1,4 +1,26 @@
 ---
+layout: none
+sitemap: false
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Redirecting…</title>
+{% if site.posts and site.posts.size > 0 %}
+<meta http-equiv="refresh" content="0; url={{ site.posts.first.url | relative_url }}">
+<link rel="canonical" href="{{ site.posts.first.url | relative_url }}">
+{% endif %}
+</head>
+<body>
+{% if site.posts and site.posts.size > 0 %}
+<p>Redirecting to the latest post… <a href="{{ site.posts.first.url | relative_url }}">Click here if you are not redirected.</a></p>
+{% else %}
+<p>No posts found.</p>
+{% endif %}
+</body>
+</html>
+---
 layout: default
 author_profile: true
 ---
