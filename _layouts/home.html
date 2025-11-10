@@ -1,8 +1,6 @@
 ---
-layout: archive
+layout: default
 ---
-
-{{ content }}
 
 {% assign latest_post = site.posts.first %}
 
@@ -61,6 +59,11 @@ layout: archive
   </div>
 </div>
 {% else %}
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
-<p>No posts yet.</p>
+<div id="main" role="main">
+  {% include sidebar.html %}
+  <div class="archive">
+    <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+    <p>No posts yet.</p>
+  </div>
+</div>
 {% endif %}
