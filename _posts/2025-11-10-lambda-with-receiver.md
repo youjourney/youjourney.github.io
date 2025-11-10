@@ -1,6 +1,18 @@
 ---
-
-## title: "Understanding Lambdas with Receiver in Kotlin" excerpt: "A clear explanation of Kotlin's 'lambda with receiver' syntax, how it differs from normal lambdas, and why it's powerful in DSLs and Compose." categories: ["Kotlin", "Android", "Compose"] tags: ["lambda", "receiver", "DSL", "Kotlin", "Compose"] last\_modified\_at: 2025-11-10
+title: "Understanding Lambdas with Receiver in Kotlin"
+excerpt: "A clear explanation of Kotlin's 'lambda with receiver' syntax, how it differs from normal lambdas, and why it's powerful in DSLs and Compose."
+categories:
+  - Kotlin
+  - Android
+  - Compose
+tags:
+  - lambda
+  - receiver
+  - DSL
+  - Kotlin
+  - Compose
+last_modified_at: 2025-11-10T00:00:00+0900
+---
 
 ## 📘 Introduction
 
