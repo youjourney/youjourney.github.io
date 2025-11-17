@@ -4,7 +4,7 @@ title: "How Compose Renders Repeated Composables (with Lazy keys & compiler metr
 excerpt: "forEach와 Lazy*에서 반복되는 컴포저블이 실제로 어떻게 붙고(emit) 재사용되는지, Slot Table/Applier/Diff, 고급 key 전략, 그리고 Compose Compiler Metrics 정리."
 categories: ["Android", "Jetpack Compose", "Kotlin"]
 tags: ["Compose", "Recomposition", "Slot Table", "Composer", "Applier", "key", "LazyColumn", "Tracing", "Performance", "Compiler Metrics"]
-last_modified_at: 2025-11-17
+last_modified_at: 2025-11-17T18:40:00+09:00
 ---
 
 # Column + forEach의 내부 동작 요약  
