@@ -1,4 +1,3 @@
-
 ---
 title: "How Compose Renders Repeated Composables (with Lazy keys & compiler metrics)"
 excerpt: "forEach와 Lazy*에서 반복되는 컴포저블이 실제로 어떻게 붙고(emit) 재사용되는지, Slot Table/Applier/Diff, 고급 key 전략, 그리고 Compose Compiler Metrics 정리."
